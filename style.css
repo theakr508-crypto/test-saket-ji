@@ -1,0 +1,1134 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.text-red {
+    color: #e31e24;
+}
+
+/* Header Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111827;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #e31e24;
+}
+
+.btn-dark {
+    background-color: #151a30;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    background-color: #ffffff;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #151a30;
+}
+
+.hero-text p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #151a30;
+    padding: 10px 20px;
+    border: 2px solid #151a30;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero-image {
+    width: 45%;
+    position: relative;
+}
+
+/* Placeholder for the delivery guy */
+.image-placeholder {
+    background-color: #151a30;
+    height: 400px;
+    border-radius: 20px 200px 200px 20px;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    background-color: #e31e24;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    border: 5px solid #fff;
+}
+
+.badge span {
+    font-size: 10px;
+}
+
+/* Enquiry Form Section */
+.enquiry-section {
+    padding: 0 5% 50px 5%;
+}
+
+.enquiry-container {
+    background-color: #151a30;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.enquiry-header {
+    background-color: #e31e24;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.enquiry-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #4b5563;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #9ca3af;
+}
+
+.checkbox-group {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.checkbox-group input {
+    accent-color: #e31e24;
+}
+
+.btn-submit {
+    background-color: #fff;
+    color: #151a30;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+}
+/* --- LOADING SCREEN (PRELOADER) --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader-logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: #111827;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+.loader-line {
+    width: 200px;
+    height: 4px;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background-color: #e31e24; /* Red color loading line */
+    border-radius: 4px;
+    animation: loadLine 1s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes loadLine {
+    0% { left: 0%; width: 30%; }
+    100% { left: 70%; width: 30%; }
+}
+
+/* Class to hide loader using JavaScript */
+.hide-loader {
+    opacity: 0;
+    pointer-events: none;
+}
+/* --- SERVICES SECTION --- */
+/* --- SERVICES SECTION (UPDATED FOR DARK THEME) --- */
+.services-section {
+    padding: 80px 8%;
+    background-color: #151a30; /* Dark Blue Theme */
+    text-align: center;
+}
+
+.services-section h2 {
+    color: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for 8 cards */
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-image-placeholder {
+    width: 100%;
+    height: 160px;
+    background-color: #e1e7f0;
+}
+
+.btn-red {
+    background-color: #e31e24;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-red:hover {
+    background-color: #c8191f;
+}
+/* Hover Effect as shown in Figma */
+.service-card:hover, .service-card.active-card {
+    border-color: #e31e24; /* Red border on hover */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card-icon {
+    margin-bottom: 25px;
+}
+
+.icon-square {
+    width: 60px;
+    height: 60px;
+    background-color: #e1e7f0; /* Placeholder light blue for icons */
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #151a30;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.read-more {
+    color: #e31e24;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+/* --- STATS SECTION --- */
+.stats-section {
+    padding: 60px 8%;
+    background-color: #ffffff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sub-text {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    border-top: 2px dashed #e5e7eb; /* Dashed line for stats */
+    padding-top: 40px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-item h3 {
+    color: #e31e24; /* Theme Red */
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.stat-item p {
+    color: #151a30;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+/* --- RESPONSIBILITY SECTION --- */
+.responsibility-section {
+    display: flex;
+    padding: 80px 8%;
+    background-color: #fbfbfb;
+    align-items: center;
+    gap: 60px;
+}
+
+.resp-content {
+    flex: 1;
+}
+
+.resp-content h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #151a30;
+    margin-bottom: 25px;
+}
+
+.resp-content p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.resp-image {
+    flex: 1;
+}
+
+.video-placeholder {
+    background-color: #e1e7f0; /* Jab photo dalegi toh yeh background hat jayega */
+    height: 400px;
+    border-radius: 15px;
+    border: 8px solid #e31e24; /* Red frame like Figma */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    color: #e31e24;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+/* --- PROCESS SECTION (HOW WE GET YOU MOVED) --- */
+.process-section {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.process-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.process-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+.step-card {
+    background-color: #151a30; /* Dark blue background */
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px dashed #4b5563; /* Dashed border from Figma */
+    position: relative;
+    text-align: left;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e31e24; /* Red icon box */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.step-card h4 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.step-card p {
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.4;
+}
+
+.process-center {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+}
+
+.center-boy-placeholder {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    background-color: #f3f4f6;
+    border-radius: 15px;
+    border: 4px solid #e1e7f0;
+}
+
+/* --- SETTLEMENT PARTNER SECTION --- */
+.settlement-section {
+    padding: 80px 8%;
+    background-color: #151a30; /* Dark Blue Section Background */
+}
+
+.settlement-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.settlement-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden; /* Keeps image inside borders */
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    background-color: #e1e7f0; /* Image placeholder */
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h4 {
+    color: #151a30;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+}
+/* --- TESTIMONIALS SECTION --- */
+.testimonials-section {
+    padding: 80px 8%;
+    background-color: #fbfbfb;
+}
+
+.testimonial-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    flex: 1;
+    background-color: #4b5563; /* Placeholder for the image background */
+    height: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.test-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #cbd5e1;
+    border-radius: 50%;
+}
+
+.user-info h4 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.user-info p {
+    font-size: 11px;
+    color: #cbd5e1;
+}
+
+.stars {
+    color: #fbbf24; /* Gold stars */
+    font-size: 12px;
+}
+
+.play-btn-small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.review-text {
+    font-size: 12px;
+    line-height: 1.5;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4); /* Text readability overlay */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* --- BRANDS SECTION (FIXED) --- */
+.brands-section {
+    padding: 60px 8%;
+    background-color: #fbfbfb; 
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.brands-flex {
+    display: flex;
+    justify-content: center; /* Ekdum center mein rakhega */
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 60px; /* Logos ke beech mast space */
+    margin-top: 40px;
+}
+
+.brand-logo {
+    font-weight: 800;
+    font-size: 28px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Halka sa bada hoga bina design tode */
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #0b1120; /* Very Dark Blue */
+    color: #ffffff;
+}
+
+.footer-banner {
+    background-color: #151a30; /* Slightly lighter dark blue */
+    padding: 60px 8%;
+    text-align: center;
+    border-bottom: 2px solid #1e293b;
+}
+
+.footer-banner h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.banner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #151a30;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 8%;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links-col a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.links-col a:hover {
+    color: #e31e24;
+}
+
+.contact-col p {
+    font-size: 12px;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom {
+    background-color: #e31e24; /* Red Footer Bottom */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8%;
+    font-size: 12px;
+    font-weight: 600;
+}
+/* --- INSIGHTS & TIPS SECTION --- */
+.insights-section {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.insights-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.insight-card {
+    flex: 1;
+    background-color: #151a30; /* Dark Blue */
+    border-radius: 15px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.insight-img {
+    height: 160px;
+    background-color: #cbd5e1; /* Image placeholder */
+}
+
+.insight-content {
+    padding: 25px 20px;
+}
+
+.insight-content h4 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.insight-content p {
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 8px 25px;
+    border: 1px solid #4b5563;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    border-color: #e31e24;
+    color: #e31e24;
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+    padding: 80px 8% 100px 8%;
+    background-color: #fbfbfb;
+}
+
+.faq-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.faq-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: #151a30; /* Dark blue accordion */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.faq-item summary {
+    padding: 18px 25px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none; /* Hides default arrow */
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+/* Custom Dropdown Arrow */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item summary::after {
+    content: '\25BC'; /* Down Arrow */
+    position: absolute;
+    right: 25px;
+    color: #e31e24;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* When FAQ is open */
+.faq-item[open] summary {
+    border-radius: 10px 10px 0 0;
+}
+.faq-item[open] summary::after {
+    transform: rotate(180deg); /* Arrow points up */
+}
+
+.faq-answer {
+    background-color: #ffffff;
+    color: #4b5563;
+    padding: 20px 25px;
+    font-size: 12px;
+    line-height: 1.6;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    font-weight: 500;
+}
+/* --- PRESENCE ACROSS INDIA SECTION --- */
+/* --- PRESENCE ACROSS INDIA SECTION (EXACT FIGMA DESIGN) --- */
+.presence-section {
+    padding: 80px 8% 100px 8%;
+    background-color: #ffffff;
+}
+
+.map-container {
+    width: 100%;
+    position: relative; /* Button placement ke liye zaroori hai */
+    text-align: center;
+}
+
+.exact-map {
+    width: 100%;
+    max-width: 900px; /* Map ko zyada bada hone se rokne ke liye */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Map ke upar wala Red Button (Figma style) */
+.map-btn {
+    position: absolute;
+    bottom: 20px; /* Figma ke hisaab se position adjust kar lena */
+    left: 50%;
+    transform: translateX(-50%); /* Center mein lane ke liye */
+    background-color: #e31e24; /* Theme Red */
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(227, 30, 36, 0.4); /* Red Shadow */
+}
+
+/* --- PAN-INDIA PRESENCE SECTION (Dark) --- */
+.pan-india-section {
+    padding: 80px 8%;
+    background-color: #050505; /* Deep black/dark blue background */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dotted Map Background Effect Placeholder */
+.pan-india-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Client can provide a dotted map image here later */
+    background-image: radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05; /* Subtle dotted effect */
+    z-index: 1;
+}
+
+.pan-india-section .section-header, 
+.pan-india-section .cities-grid,
+.pan-india-section .text-center {
+    position: relative;
+    z-index: 2; /* Keeps text above the dotted background */
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.city-col p {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+/* --- OUR IMPACT SECTION --- */
+.impact-section {
+    padding: 60px 8%;
+    background-color: #ffffff;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 dabbe ek line mein */
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.impact-card {
+    background-color: #151a30; /* Dark Blue */
+    color: #ffffff;
+    border: 2px solid #374151; /* Light grey/blue border */
+    border-radius: 12px;
+    padding: 15px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    border-color: #e31e24; /* Hover par red border */
+}
+/* ========================================== */
+/* 📂 FINAL OFFLINE IMAGES MAPPING 📂         */
+/* ========================================== */
+
+/* 1. Hero Section Main Image */
+.image-placeholder {
+    background-image: url('images/hero-boy.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 2. Responsibility Section Video Thumbnail */
+.video-placeholder {
+    background-image: url('images/video-thumb.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 3. India Map Section */
+.map-graphic-placeholder div {
+    background-image: url('images/india-map.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+/* 4. Testimonial Avatar (Rajesh Khanna) */
+.user-avatar {
+    background-image: url('images/avatar.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 5. OUR SERVICES CARDS IMAGES */
+.services-grid .service-card:nth-child(1) .card-image-placeholder { background-image: url('images/service1.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(2) .card-image-placeholder { background-image: url('images/service2.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(3) .card-image-placeholder { background-image: url('images/service3.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(4) .card-image-placeholder { background-image: url('images/service4.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(5) .card-image-placeholder { background-image: url('images/service5.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(6) .card-image-placeholder { background-image: url('images/service6.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(7) .card-image-placeholder { background-image: url('images/service7.jpg'); background-size: cover; background-position: center; }
+.services-grid .service-card:nth-child(8) .card-image-placeholder { background-image: url('images/service8.jpg'); background-size: cover; background-position: center; }
+
+/* 6. SETTLEMENT PARTNER CARDS IMAGES */
+.settlement-grid .settlement-card:nth-child(1) .card-image { background-image: url('images/settle1.jpg'); background-size: cover; background-position: center; }
+.settlement-grid .settlement-card:nth-child(2) .card-image { background-image: url('images/settle2.jpg'); background-size: cover; background-position: center; }
+.settlement-grid .settlement-card:nth-child(3) .card-image { background-image: url('images/settle3.jpg'); background-size: cover; background-position: center; }
+.settlement-grid .settlement-card:nth-child(4) .card-image { background-image: url('images/settle4.jpg'); background-size: cover; background-position: center; }
+.settlement-grid .settlement-card:nth-child(5) .card-image { background-image: url('images/settle5.jpg'); background-size: cover; background-position: center; }
+.settlement-grid .settlement-card:nth-child(6) .card-image { background-image: url('images/settle6.jpg'); background-size: cover; background-position: center; }
+.settlement-grid .settlement-card:nth-child(7) .card-image { background-image: url('images/settle7.jpg'); background-size: cover; background-position: center; }
+.settlement-grid .settlement-card:nth-child(8) .card-image { background-image: url('images/settle8.jpg'); background-size: cover; background-position: center; }
+/* --- MOVING INSIGHTS & TIPS CARDS LOCAL IMAGES MAPPING --- */
+
+/* Card 1 */
+.insights-grid .insight-card:nth-child(1) .insight-img {
+    background-image: url('images/blog1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* Card 2 */
+.insights-grid .insight-card:nth-child(2) .insight-img {
+    background-image: url('images/blog2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* Card 3 */
+.insights-grid .insight-card:nth-child(3) .insight-img {
+    background-image: url('images/blog3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* Card 4 */
+.insights-grid .insight-card:nth-child(4) .insight-img {
+    background-image: url('images/blog4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* ========================================== */
+/* 📂 HOW WE GET YOU MOVED - CENTER IMAGE 📂  */
+/* ========================================== */
+
+.center-boy-placeholder {
+    background-image: url('images/process-boy.png');
+    background-size: contain; /* contain isliye taaki poori photo fit ho jaye */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Purane khali dabbe ka color aur border hatane ke liye */
+    background-color: transparent; 
+    border: none; 
+}
+/* ========================================== */
+/* 🔗 HOW WE GET YOU MOVED - DOTTED LINES (FIXED) 🔗  */
+/* ========================================== */
+
+/* Left side wale cards */
+.process-column:first-child .step-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -100px; /* Isko adjust kar sakta hai */
+    width: 100px;  /* Line ki nayi lambaai */
+    border-top: 2px dashed #4b5563; 
+    z-index: -1; /* Image ke peeche bhejne ke liye */
+}
+
+/* Right side wale cards */
+.process-column:last-child .step-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100px; /* Isko adjust kar sakta hai */
+    width: 100px; /* Line ki nayi lambaai */
+    border-top: 2px dashed #4b5563;
+    z-index: -1;
+}
