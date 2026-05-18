@@ -1155,33 +1155,238 @@ body {
 /* 📱 BRAHMASTRA: FORCE MOBILE RESPONSIVENESS */
 /* ========================================== */
 
-@media screen and (max-width: 768px) {
-    
-    /* Grids ko jabardasti 1 line mein lana */
-    .services-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
-    .settlement-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
-    .cities-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
-    
-    /* Impact section ko 2 dabbe dikhana */
-    .impact-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
-    
-    /* Flexbox walon ko ek ke neeche ek lana */
-    .brands-flex { flex-direction: column !important; gap: 30px !important; }
-    .footer-main { flex-direction: column !important; text-align: center !important; gap: 30px !important; }
-    .faq-grid { flex-direction: column !important; gap: 20px !important; }
-    .insights-grid { flex-direction: column !important; gap: 20px !important; }
-    .testimonial-grid { flex-direction: column !important; gap: 20px !important; }
-    .banner-buttons { flex-direction: column !important; gap: 15px !important; }
-    
-    /* Process/Delivery Boy Section Fix */
-    .process-container { flex-direction: column !important; gap: 30px !important; }
-    .process-center { margin: 20px 0 !important; height: auto !important; }
-    /* Lines hide karna */
-    .process-column:first-child .step-card::after { display: none !important; }
-    .process-column:last-child .step-card::after { display: none !important; }
-    
-    /* Extra padding kam karna */
-    section { padding: 40px 5% !important; }
-    .section-header h2 { font-size: 22px !important; }
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 15px 5%;
+    }
 
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 5%;
+        gap: 40px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .settlement-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .impact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 5%;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-text p,
+    .sub-text,
+    .resp-content p,
+    .stat-item p,
+    .service-card p,
+    .card-content p,
+    .faq-answer,
+    .insight-content p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons a,
+    .btn-dark,
+    .btn-outline,
+    .btn-red,
+    .btn-white,
+    .btn-outline-white,
+    .btn-submit,
+    .read-more-btn,
+    .map-btn {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .image-placeholder {
+        height: 280px;
+    }
+
+    .enquiry-form {
+        padding: 25px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-submit {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .services-grid,
+    .settlement-grid,
+    .cities-grid,
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid,
+    .faq-grid,
+    .insights-grid,
+    .testimonial-grid,
+    .process-container,
+    .brands-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .resp-content,
+    .resp-image,
+    .process-center,
+    .footer-col {
+        width: 100%;
+    }
+
+    .responsibility-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .video-placeholder {
+        height: 240px;
+    }
+
+    .process-column:first-child .step-card::after,
+    .process-column:last-child .step-card::after {
+        display: none;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .brands-flex {
+        gap: 20px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .map-btn {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+}
+/* ========================================== */
+/* 🛑 ANTI-STRETCH / ANTI-OVERFLOW FIX 🛑     */
+/* ========================================== */
+
+@media screen and (max-width: 768px) {
+    html, body {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Har ek section aur dabbe ko chhota karne ka order */
+    section, div, img, p, h1, h2, h3 {
+        max-width: 100vw !important;
+    }
+
+    /* Dotted lines ko permanent maar do phone pe */
+    .process-column:first-child .step-card::after,
+    .process-column:last-child .step-card::after,
+    .step-card::after {
+        display: none !important;
+        width: 0 !important;
+        content: none !important;
+    }
 }
