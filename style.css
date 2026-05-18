@@ -1133,81 +1133,34 @@ body {
     z-index: -1;
 }
 /* ========================================== */
-/* 📱 MOBILE RESPONSIVENESS (PHONE FRIENDLY) 📱 */
+/* 📱 BRAHMASTRA: FORCE MOBILE RESPONSIVENESS */
 /* ========================================== */
 
-@media (max-width: 768px) {
-    /* 1. General Spacing Kam Karna */
-    section {
-        padding: 40px 5% !important;
-    }
-    .section-header h2 {
-        font-size: 24px;
-    }
-
-    /* 2. Grids ko 1 Line mein lana (Services, Cities, Settlement) */
-    .services-grid, 
-    .settlement-grid {
-        grid-template-columns: repeat(1, 1fr) !important;
-        gap: 20px;
-    }
-
-    .cities-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    /* Our Impact ko 2 dabbo ki line banana phone pe */
-    .impact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* 3. Flexboxes ko upar-neeche karna */
-    .testimonial-grid, 
-    .insights-grid, 
-    .faq-grid, 
-    .footer-main,
-    .banner-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* 4. Process Section (Delivery Boy) ko theek karna */
-    .process-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-    /* Phone par dotted lines hide karni padengi warna design tootega */
-    .process-column:first-child .step-card::after,
-    .process-column:last-child .step-card::after {
-        display: none; 
-    }
-    .process-center {
-        margin: 20px 0;
-        height: 250px;
-    }
-
-    /* 5. Footer Adjustments */
-    .footer-main {
-        text-align: center;
-        align-items: center;
-    }
-    .footer-col {
-        margin-bottom: 20px;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    /* 6. Map Section Fix */
-    .exact-map {
-        height: 250px;
-        object-fit: cover;
-    }
-    .map-btn {
-        width: 90%;
-        bottom: 10px;
-    }
+@media screen and (max-width: 768px) {
+    /* Grids ko jabardasti 1 line mein lana */
+    .services-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
+    .settlement-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
+    .cities-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
+    
+    /* Impact section ko 2 dabbe dikhana */
+    .impact-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
+    
+    /* Flexbox walon ko ek ke neeche ek lana */
+    .brands-flex { flex-direction: column !important; gap: 30px !important; }
+    .footer-main { flex-direction: column !important; text-align: center !important; gap: 30px !important; }
+    .faq-grid { flex-direction: column !important; gap: 20px !important; }
+    .insights-grid { flex-direction: column !important; gap: 20px !important; }
+    .testimonial-grid { flex-direction: column !important; gap: 20px !important; }
+    .banner-buttons { flex-direction: column !important; gap: 15px !important; }
+    
+    /* Process/Delivery Boy Section Fix */
+    .process-container { flex-direction: column !important; gap: 30px !important; }
+    .process-center { margin: 20px 0 !important; height: auto !important; }
+    /* Lines hide karna */
+    .process-column:first-child .step-card::after { display: none !important; }
+    .process-column:last-child .step-card::after { display: none !important; }
+    
+    /* Extra padding kam karna */
+    section { padding: 40px 5% !important; }
+    .section-header h2 { font-size: 22px !important; }
 }
