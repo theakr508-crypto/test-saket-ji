@@ -1,3 +1,22 @@
+/* ========================================== */
+/* 🚨 THE ULTIMATE SCREEN FIX (OVERFLOW) 🚨   */
+/* ========================================== */
+
+* {
+    box-sizing: border-box; /* Yeh padding ki wajah se screen ko bada nahi hone dega */
+}
+
+html, body {
+    overflow-x: hidden; /* Yeh kisi bhi cheez ko screen ke bahar nahi nikalne dega */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
 
@@ -1137,6 +1156,7 @@ body {
 /* ========================================== */
 
 @media screen and (max-width: 768px) {
+    
     /* Grids ko jabardasti 1 line mein lana */
     .services-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
     .settlement-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 20px !important; }
@@ -1163,4 +1183,5 @@ body {
     /* Extra padding kam karna */
     section { padding: 40px 5% !important; }
     .section-header h2 { font-size: 22px !important; }
+
 }
