@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mahima Packers & Movers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🎬 About Page Animations */
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-left { animation: fadeInLeft 1s ease-out forwards; }
+        .animate-right { animation: fadeInRight 1s ease-out forwards; }
+        .animate-up { animation: fadeInUp 1s ease-out forwards; }
+        
+        .stat-box { transition: transform 0.3s; }
+        .stat-box:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+
+    <header class="main-header-section">
+        <div class="top-header">
+            <div class="header-container">
+                <div class="logo-area">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h2 class="company-logo">MAHIMA <span class="text-red">PACKERS & MOVERS</span></h2>
+                    </a>
+                </div>
+                <nav class="nav-main">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" style="color: #e31e24;">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="index.html#how-it-works">Process</a>
+                    <a href="index.html#settlement">Settlement</a>
+                    <a href="index.html#tracking">Tracking</a>
+                    <a href="index.html#payment" class="pay-link"><i class="fas fa-credit-card"></i> Online Payment</a>
+                    <a href="#" class="btn-red quote-btn">Get Free Quote</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section style="background: linear-gradient(rgba(21, 26, 48, 0.85), rgba(21, 26, 48, 0.85)), url('https://images.unsplash.com/photo-1516575360438-15160eda2141?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white;">
+        <h1 class="animate-up" style="font-size: 42px; margin-bottom: 10px;">About Our Company</h1>
+        <p class="animate-up" style="font-size: 18px; color: #cbd5e1; animation-delay: 0.2s;">Your Most Trusted Moving & Logistics Partner</p>
+    </section>
+
+    <section style="padding: 80px 5%; background-color: #fff; overflow: hidden;">
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+            <div class="animate-left" style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 32px; color: #151a30; margin-bottom: 20px;">Who We Are at <span class="text-red">Mahima Packers</span></h2>
+                <p style="font-size: 16px; color: #6b7280; line-height: 1.8; margin-bottom: 15px;">Mahima Packers & Movers is a premier relocation service provider dedicated to delivering exceptional, stress-free shifting solutions.</p>
+                <p style="font-size: 16px; color: #6b7280; line-height: 1.8; margin-bottom: 25px;">Our core principles are built on safety, transparency, and punctuality. We utilize top-grade packing materials and an expert workforce to safeguard your valuable items.</p>
+                
+                <div style="display: flex; gap: 40px; margin-top: 20px;">
+                    <div class="stat-box">
+                        <h3 style="color: #e31e24; font-size: 32px; margin-bottom: 5px;">10k+</h3>
+                        <p style="font-weight: 600; color: #151a30;">Happy Shifts</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 style="color: #e31e24; font-size: 32px; margin-bottom: 5px;">150+</h3>
+                        <p style="font-weight: 600; color: #151a30;">Expert Staff</p>
+                    </div>
+                </div>
+            </div>
+            <div class="animate-right" style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=500&auto=format&fit=crop" alt="Our Team" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.12); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #151a30; color: white; text-align: center; padding: 30px 5%; font-size: 14px;">
+        <p>&copy; 2026 Mahima Packers & Movers. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

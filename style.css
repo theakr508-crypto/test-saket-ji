@@ -36,44 +36,44 @@ body {
     color: #e31e24;
 }
 
-/* Header Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
+/* ========================================== */
+/* 🔝 MAHIMA PACKERS - CLEAN HEADER CSS 🔝    */
+/* ========================================== */
+
+/* Poora Header ekdum top par fix rahega */
+.main-header-section {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+/* Main Navbar */
+.top-header { padding: 15px 0; }
+.header-container {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1300px; margin: 0 auto; padding: 0 4%;
 }
+.company-logo { color: #151a30; margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+.text-red { color: #e31e24; }
 
-.nav-links a {
-    text-decoration: none;
-    color: #111827;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
+.nav-main { display: flex; align-items: center; gap: 18px; }
+.nav-main a {
+    text-decoration: none; color: #151a30; font-weight: 600;
+    font-size: 14px; transition: 0.3s;
 }
+.nav-main a:not(.btn-red):hover { color: #e31e24; }
 
-.nav-links a:hover {
-    color: #e31e24;
+/* Payment & Quote Button */
+.pay-link { color: #b91c1c !important; font-weight: 700 !important; }
+.btn-red {
+    background-color: #e31e24; color: #fff !important;
+    padding: 10px 20px; border-radius: 6px; border: none;
+    cursor: pointer; transition: 0.3s;
 }
-
-.btn-dark {
-    background-color: #151a30;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-}
-
+.btn-red:hover { background-color: #c91820; transform: translateY(-2px); }
 /* Hero Section */
 .hero {
     display: flex;
@@ -473,70 +473,136 @@ body {
 .play-btn:hover {
     transform: scale(1.1);
 }
-/* --- PROCESS SECTION (HOW WE GET YOU MOVED) --- */
-.process-section {
-    padding: 80px 8%;
+/* ========================================== */
+/* 🚚 MOVE PROCESS SECTION (FAADU CODE) 🚚    */
+/* ========================================== */
+
+.move-process {
+    padding: 80px 0;
     background-color: #ffffff;
+    overflow: hidden;
 }
 
-.process-container {
+.process-flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     margin-top: 50px;
+    position: relative;
 }
 
-.process-column {
+.process-col {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     flex: 1;
 }
 
-.step-card {
-    background-color: #151a30; /* Dark blue background */
-    color: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    border: 2px dashed #4b5563; /* Dashed border from Figma */
-    position: relative;
-    text-align: left;
+.process-center-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
 
-.step-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #e31e24; /* Red icon box */
-    border-radius: 8px;
+.move-img {
+    max-width: 100%;
+    width: 360px; /* Optimal size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.move-img:hover {
+    transform: translateY(-8px);
+}
+
+/* Process Cards */
+.process-card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    border-color: #e31e24; /* Red Border on Hover */
+}
+
+.card-icon {
+    font-size: 32px;
+    color: #e31e24;
     margin-bottom: 15px;
 }
 
-.step-card h4 {
+.process-card h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #151a30;
+}
+
+.process-card p {
     font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 5px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
 }
 
-.step-card p {
-    font-size: 12px;
-    color: #cbd5e1;
-    line-height: 1.4;
+/* ========================================== */
+/* 🧩 DOTTED LINES (PERFECTLY ALIGNED) 🧩      */
+/* ========================================== */
+
+/* Left Cards Lines to Center */
+.process-col.left .process-card::after {
+    content: '';
+    position: absolute;
+    right: -40px; /* Line goes right towards image */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    border-top: 2px dashed #cbd5e1;
+    z-index: -1;
 }
 
-.process-center {
-    flex: 1.5;
-    display: flex;
-    justify-content: center;
+/* Right Cards Lines to Center */
+.process-col.right .process-card::after {
+    content: '';
+    position: absolute;
+    left: -40px; /* Line goes left towards image */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    border-top: 2px dashed #cbd5e1;
+    z-index: -1;
 }
 
-.center-boy-placeholder {
-    width: 100%;
-    max-width: 300px;
-    height: 400px;
-    background-color: #f3f4f6;
-    border-radius: 15px;
-    border: 4px solid #e1e7f0;
+/* ========================================== */
+/* 📱 MOBILE RESPONSIVE 📱                    */
+/* ========================================== */
+
+@media screen and (max-width: 991px) {
+    .process-flex-container {
+        flex-direction: column;
+    }
+    
+    .process-center-img {
+        order: -1; /* Image on top */
+        margin-bottom: 30px;
+    }
+    
+    /* Hide lines on mobile to avoid layout break */
+    .process-col.left .process-card::after,
+    .process-col.right .process-card::after {
+        display: none !important;
+    }
 }
 
 /* --- SETTLEMENT PARTNER SECTION --- */
@@ -1389,4 +1455,302 @@ body {
         width: 0 !important;
         content: none !important;
     }
+}
+/* ========================================== */
+/* 🌟 PREMIUM HOVER EFFECTS & ANIMATIONS 🌟   */
+/* ========================================== */
+
+/* 1. All Cards Lift & Shadow Effect */
+.service-card, 
+.settlement-card, 
+.insight-card, 
+.step-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+
+.service-card:hover, 
+.settlement-card:hover, 
+.insight-card:hover, 
+.step-card:hover {
+    transform: translateY(-8px) !important; /* Card halka sa upar uthega */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important; /* Mast 3D shadow aayegi */
+}
+
+/* 2. Buttons Glow & Pop Effect */
+.btn-red, 
+.btn-dark, 
+.btn-outline-white, 
+.map-btn {
+    transition: all 0.3s ease !important;
+}
+
+.btn-red:hover, 
+.map-btn:hover {
+    background-color: #c9171d !important; /* Halka dark red */
+    box-shadow: 0 6px 15px rgba(227, 30, 36, 0.5) !important; /* Red glow shadow */
+    transform: scale(1.05) !important; /* Button thoda bada hoga */
+}
+
+.btn-dark:hover {
+    background-color: #2a3454 !important; /* Halka light blue/dark theme */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4) !important;
+    transform: scale(1.05) !important;
+}
+
+.btn-outline-white:hover {
+    background-color: #ffffff !important;
+    color: #e31e24 !important;
+    transform: scale(1.05) !important;
+}
+
+/* 3. Dialer Link Hover (Lal rang ho jayega mouse aane par) */
+.dialer-link {
+    transition: color 0.3s ease;
+}
+.dialer-link:hover {
+    color: #e31e24 !important; 
+}
+/* ========================================== */
+/* 🌊 BUTTON RIPPLE EFFECT (JS KE LIYE) 🌊    */
+/* ========================================== */
+
+.btn-red, .btn-dark, .btn-outline-white, .map-btn {
+    position: relative;
+    overflow: hidden; /* Wave ko button ke andar rakhne ke liye */
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
+/* ========================================== */
+/* 📞 TOP CONTACT DROPDOWN 📞                 */
+/* ========================================== */
+
+.contact-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 100;
+    overflow: hidden;
+    margin-top: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.dropdown-content a {
+    color: #151a30;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f3f4f6;
+    color: #e31e24; /* Hover par text red ho jayega */
+}
+
+/* Jab mouse button par jayega tabhi option dikhenge */
+.contact-dropdown:hover .dropdown-content {
+    display: block;
+}
+/* ========================================== */
+/* 🗺️ MAP AND BUTTON OVERLAP FINAL FIX 🗺️     */
+/* ========================================== */
+
+/* 1. Map ka dabba */
+.map-container {
+    position: relative !important;
+    z-index: 5 !important; 
+}
+
+/* 2. Map ki Photo (Iska z-index kam rakhenge taaki button aage aa sake) */
+.exact-map {
+    position: relative !important;
+    z-index: 1 !important; 
+}
+
+/* 3. Interstate Route Wala Button (Sabse aage) */
+.map-btn {
+    position: absolute !important;
+    z-index: 999 !important; /* Yeh 999 usko sabse aage nikal dega */
+    bottom: 20px !important;
+}
+
+/* 4. Map ke theek upar wala section aur View More button (usko bhi protect karna hai) */
+.settlement-section {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-bottom: 30px !important; /* Map aur upar wale button ke beech thodi jagah banayega */
+}
+/* ========================================== */
+/* 🔝 TOP HEADER ALWAYS ON TOP 🔝             */
+/* ========================================== */
+
+/* Tera jo bhi main header class hai (.header, .top-bar, ya .nav-bar), usko yahan likh de */
+header, .top-bar, .nav-main {
+    position: relative !important; /* Agar header sticky hai toh 'sticky' ya 'fixed' hi rehne dena */
+    z-index: 9999 !important; /* Yeh usko website ki har cheez (map, buttons) se upar rakhega */
+}
+
+/* Social links ka chhota sa hover effect */
+.top-social-links a {
+    color: #151a30; /* Dark blue */
+    transition: color 0.3s ease;
+}
+
+.top-social-links a:hover {
+    color: #e31e24; /* Red hover */
+}
+/* ========================================== */
+/* ✨ PREMIUM TOP SOCIAL ICONS ✨             */
+/* ========================================== */
+
+.top-social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Icons ke beech ka space */
+}
+
+.social-text {
+    font-weight: 600;
+    color: #151a30; /* Dark blue text */
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+/* Icons ka default gol dabba (Grey background) */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f3f4f6; /* Light gray */
+    color: #4b5563; /* Dark gray icon */
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+/* HOVER EFFECTS: Mouse aane par asli rang aur thoda upar uthega! */
+
+.social-icon.fb:hover {
+    background-color: #1877F2; /* Facebook Blue */
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3);
+}
+
+.social-icon.insta:hover {
+    /* Instagram ka mast Gradient color */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(220, 39, 67, 0.3);
+}
+
+.social-icon.x-twitter:hover {
+    background-color: #000000; /* X / Twitter Black */
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* ========================================== */
+/* ⏳ LOADER ALWAYS ON TOP (Z-INDEX FIX) ⏳   */
+/* ========================================== */
+
+/* Dhyan de: Agar tere loader ki class ka naam kuch aur hai (jaise .loader ya #preloader), toh usko yahan likh dena */
+.preloader, 
+.loader, 
+#preloader, 
+.loader-wrapper {
+    z-index: 99999 !important; /* Top bar (9999) se bada number, sabse aage rakhega */
+}
+/* ========================================== */
+/* 🚚 EXACT MATCH HOVER (NO COLOR CHANGE) 🚚  */
+/* ========================================== */
+
+/* Cards sirf halke se upar uthenge, unka design bilkul nahi badlega */
+.step-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.step-card:hover {
+    transform: translateY(-6px) !important; /* Halka sa upar uthega */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important; /* Ekdum soft, natural shadow */
+}
+
+/* Delivery Boy photo par halka sa smooth zoom */
+.process-center img {
+    transition: transform 0.4s ease !important;
+}
+
+.process-center img:hover {
+    transform: scale(1.03) !important; /* Ekdum minor zoom, over-acting nahi */
+}
+/* ========================================== */
+/* 🚀 SETTLEMENT CARDS "KNOW MORE" BUTTON 🚀  */
+/* ========================================== */
+
+.settlement-card .know-more-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e31e24; /* Red color */
+    background-color: transparent;
+    border: 1px solid #e31e24; /* Red border */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease !important;
+}
+
+.settlement-card .know-more-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease !important;
+}
+
+/* 🎯 Hover Animation (Jab mouse upar aaye) */
+.settlement-card .know-more-btn:hover {
+    background-color: #e31e24; /* Background red ho jayega */
+    color: #ffffff; /* Text white ho jayega */
+    box-shadow: 0 4px 10px rgba(227, 30, 36, 0.3);
+    transform: translateY(-2px); /* Halka sa upar jump */
+}
+
+/* Arrow (Tir) thoda aage khiskega */
+.settlement-card .know-more-btn:hover i {
+    transform: translateX(5px); 
 }
