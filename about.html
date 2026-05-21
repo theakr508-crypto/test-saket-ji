@@ -4,30 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Mahima Packers & Movers</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* 🎬 About Page Animations */
-        @keyframes fadeInLeft {
-            from { opacity: 0; transform: translateX(-40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes fadeInRight {
-            from { opacity: 0; transform: translateX(40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-left { animation: fadeInLeft 1s ease-out forwards; }
-        .animate-right { animation: fadeInRight 1s ease-out forwards; }
-        .animate-up { animation: fadeInUp 1s ease-out forwards; }
-        
-        .stat-box { transition: transform 0.3s; }
-        .stat-box:hover { transform: scale(1.1); }
-    </style>
 </head>
 <body>
 
@@ -35,56 +19,148 @@
         <div class="top-header">
             <div class="header-container">
                 <div class="logo-area">
-                    <a href="index.html" style="text-decoration: none;">
+                    <a href="index.html" class="no-underline">
                         <h2 class="company-logo">MAHIMA <span class="text-red">PACKERS & MOVERS</span></h2>
                     </a>
                 </div>
+                <button class="menu-toggle" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <nav class="nav-main">
-                    <a href="index.html">Home</a>
-                    <a href="about.html" style="color: #e31e24;">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="index.html#how-it-works">Process</a>
-                    <a href="index.html#settlement">Settlement</a>
-                    <a href="index.html#tracking">Tracking</a>
-                    <a href="index.html#payment" class="pay-link"><i class="fas fa-credit-card"></i> Online Payment</a>
-                    <a href="#" class="btn-red quote-btn">Get Free Quote</a>
-                </nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#how-it-works">Process</a>
+    <a href="index.html#settlement">Settlement</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="index.html#payment" class="pay-link"><i class="fas fa-credit-card"></i> Online Payment</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="#" class="btn-red quote-btn">Get Free Quote</a>
+</nav>
             </div>
         </div>
     </header>
 
-    <section style="background: linear-gradient(rgba(21, 26, 48, 0.85), rgba(21, 26, 48, 0.85)), url('https://images.unsplash.com/photo-1516575360438-15160eda2141?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white;">
-        <h1 class="animate-up" style="font-size: 42px; margin-bottom: 10px;">About Our Company</h1>
-        <p class="animate-up" style="font-size: 18px; color: #cbd5e1; animation-delay: 0.2s;">Your Most Trusted Moving & Logistics Partner</p>
+    <section class="about-banner">
+        <h1>ABOUT <span class="text-red">MAHIMA PACKERS</span></h1>
+        <p>Based in Patna, Bihar, we are a leading packing and moving company committed to delivering seamless, secure, and affordable moving solutions across India.</p>
     </section>
 
-    <section style="padding: 80px 5%; background-color: #fff; overflow: hidden;">
-        <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-            <div class="animate-left" style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 32px; color: #151a30; margin-bottom: 20px;">Who We Are at <span class="text-red">Mahima Packers</span></h2>
-                <p style="font-size: 16px; color: #6b7280; line-height: 1.8; margin-bottom: 15px;">Mahima Packers & Movers is a premier relocation service provider dedicated to delivering exceptional, stress-free shifting solutions.</p>
-                <p style="font-size: 16px; color: #6b7280; line-height: 1.8; margin-bottom: 25px;">Our core principles are built on safety, transparency, and punctuality. We utilize top-grade packing materials and an expert workforce to safeguard your valuable items.</p>
-                
-                <div style="display: flex; gap: 40px; margin-top: 20px;">
-                    <div class="stat-box">
-                        <h3 style="color: #e31e24; font-size: 32px; margin-bottom: 5px;">10k+</h3>
-                        <p style="font-weight: 600; color: #151a30;">Happy Shifts</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3 style="color: #e31e24; font-size: 32px; margin-bottom: 5px;">150+</h3>
-                        <p style="font-weight: 600; color: #151a30;">Expert Staff</p>
-                    </div>
-                </div>
+    <section class="about-content-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Welcome to Mahima Packers & Movers</h2>
+                <p>With over a decade of experience, we have grown to become a trusted name in the logistics industry. Our team of trained professionals ensures every move is handled with care, precision, and punctuality.</p>
+                <p>We use modern tools, GPS-enabled vehicles, and a customer-first approach to make your relocation completely stress-free. Whether you're moving locally within Patna or relocating to another state, we are here to make your journey smooth and memorable.</p>
+                <p class="tagline-quote">"Your move, our mission."</p>
             </div>
-            <div class="animate-right" style="flex: 1; min-width: 300px; text-align: center;">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=500&auto=format&fit=crop" alt="Our Team" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.12); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800&auto=format&fit=crop" alt="Mahima Packers Team">
             </div>
         </div>
     </section>
 
-    <footer style="background-color: #151a30; color: white; text-align: center; padding: 30px 5%; font-size: 14px;">
+    <section class="figma-section bg-darker">
+        <div class="section-title-block">
+            <h2>WHY <span class="text-red">CHOOSE US?</span></h2>
+            <p>We combine 10+ years of experience, top-tier technology, and a customer-first approach to deliver excellence.</p>
+        </div>
+
+        <div class="figma-grid">
+            <div class="figma-card">
+                <div>
+                    <div class="icon-box-animate">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>TRANSPARENT PRICING</h3>
+                    <p>No hidden charges. We provide clear, upfront quotes tailored to your specific moving budget.</p>
+                </div>
+            </div>
+            <div class="figma-card">
+                <div>
+                    <div class="icon-box-animate">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>DOOR-TO-DOOR SERVICE</h3>
+                    <p>Complete peace of mind. We pick up from your old doorstep and deliver directly to your new home.</p>
+                </div>
+            </div>
+            <div class="figma-card">
+                <div>
+                    <div class="icon-box-animate">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 CUSTOMER SUPPORT</h3>
+                    <p>Our dedicated support team is always available to answer your queries and provide real-time tracking.</p>
+                </div>
+            </div>
+            <div class="figma-card">
+                <div>
+                    <div class="icon-box-animate">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>100% SAFE & SECURE</h3>
+                    <p>With high-quality packing materials and optional transit insurance, your goods are in the safest hands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-content-section director-section">
+        <div class="about-container">
+            <div class="director-card-wrapper">
+                <div class="figma-card director-card">
+                    <div class="director-img-box">
+                        <img src="images/saket-kr.jpg" alt="Saket Kr - CEO" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop'">
+                    </div>
+                    <h3>Saket Kr.</h3>
+                    <p class="director-title">CEO & Director</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="director-message-text">
+                <h2>Message from the <span class="text-red">Director</span></h2>
+                <p class="quote-italic">"Dear Valued Customers,</p>
+                <p>It gives me immense pride and pleasure to welcome you to Mahima Packers & Movers. Since our inception, our mission has been simple yet powerful — to redefine the moving experience with trust, care, and professionalism.</p>
+                <p>Relocation is more than just transporting goods; it's about moving lives, memories, and dreams. At Mahima Packers & Movers, we understand the emotional and logistical challenges involved, and we strive to make every move smooth, secure, and hassle-free.</p>
+                <p>We invest in modern infrastructure, skilled manpower, and customer-centric processes to ensure that every relocation — whether local or nationwide — is handled with precision and care. I thank all our clients, partners, and team members for their trust and support in making us a name synonymous with reliability."</p>
+                <h4>- Saket Kr.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-content-section pb-0">
+        <div class="about-container d-block">
+            <div class="stats-wrapper mt-0">
+                <div class="stat-box">
+                    <h3>10+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h3>1000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-box">
+                    <h3>24/7</h3>
+                    <p>Support System</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Safe Delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-area">
         <p>&copy; 2026 Mahima Packers & Movers. All Rights Reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

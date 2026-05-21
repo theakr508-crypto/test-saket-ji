@@ -6,6 +6,107 @@
     <title>Our Services - Mahima Packers & Movers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 🎨 Master Grid & Layout Fixes */
+        .services-section {
+            padding: 60px 5%;
+            background-color: #f9fafb;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services-card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            text-align: center;
+            border-bottom: 4px solid #151a30;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .services-card:hover {
+            transform: translateY(-8px);
+            border-bottom-color: #e31e24;
+            box-shadow: 0 15px 30px rgba(227, 30, 36, 0.1);
+        }
+        
+        /* Premium Icon Circle */
+        .service-icon-circle {
+            width: 90px;
+            height: 90px;
+            background-color: #f3f4f6;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            color: #151a30;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .services-card:hover .service-icon-circle {
+            background-color: #e31e24;
+            color: #ffffff;
+            transform: rotateY(180deg);
+        }
+
+        /* High Contrast Sharp Typography */
+        .services-card h3 {
+            font-size: 20px;
+            color: #111827 !important;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .services-card p {
+            font-size: 14.5px;
+            color: #374151 !important;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* 🚨 FAIL-PROOF KNOW MORE BUTTONS STYLING 🚨 */
+        /* Is wale block se browser ki blue line aur purani styling force-delete ho jayegi */
+        .services-card .know-more-btn {
+            display: inline-flex !important;
+            align-items: center !important;
+            margin-top: auto !important;
+            padding: 10px 20px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            color: #e31e24 !important; /* Force Red Text */
+            background-color: transparent !important;
+            border: 2px solid #e31e24 !important; /* Solid Red Border */
+            border-radius: 6px !important;
+            text-decoration: none !important; /* Removes Blue Underline Completely */
+            transition: all 0.3s ease-in-out !important;
+            outline: none !important;
+        }
+
+        .services-card .know-more-btn i {
+            margin-left: 8px !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        /* 🎯 Hover State Animation */
+        .services-card .know-more-btn:hover {
+            background-color: #e31e24 !important; /* Turns Red */
+            color: #ffffff !important; /* Text turns White */
+            box-shadow: 0 5px 15px rgba(227, 30, 36, 0.3) !important;
+        }
+
+        .services-card .know-more-btn:hover i {
+            transform: translateX(5px) !important; /* Arrow moves forward */
+        }
+    </style>
 </head>
 <body>
 
@@ -20,10 +121,10 @@
                 <nav class="nav-main">
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
-                    <a href="services.html" style="color: #e31e24;">Services</a>
+                    <a href="services.html" style="color: #e31e24 !important;">Services</a>
                     <a href="index.html#how-it-works">Process</a>
                     <a href="index.html#settlement">Settlement</a>
-                    <a href="index.html#tracking">Tracking</a>
+                    <a href="tracking.html">Tracking</a>
                     <a href="index.html#payment" class="pay-link"><i class="fas fa-credit-card"></i> Online Payment</a>
                     <a href="#" class="btn-red quote-btn">Get Free Quote</a>
                 </nav>
@@ -31,62 +132,87 @@
         </div>
     </header>
 
-    <section style="background: linear-gradient(rgba(21, 26, 48, 0.85), rgba(21, 26, 48, 0.85)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white;">
-        <h1 style="font-size: 42px; margin-bottom: 10px;">Our Premium Services</h1>
-        <p style="font-size: 18px; color: #cbd5e1;">Professional Shifting Solutions Built Around Your Convenience</p>
+    <section style="background: linear-gradient(rgba(21, 26, 48, 0.9), rgba(21, 26, 48, 0.9)), url('https://images.unsplash.com/photo-1578574437130-527eed3abbec?q=80&w=600&auto=format&fit=crop'); background-size: cover; background-position: center; padding: 60px 5%; text-align: center; color: white;">
+        <h1 style="font-size: 34px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px;">Our Premium Services</h1>
+        <p style="font-size: 16px; color: #cbd5e1; max-width: 600px; margin: 0 auto;">Professional Shifting Solutions Built Around Your Safety and Convenience</p>
     </section>
 
     <section class="services-section">
         <div class="container">
             <div class="services-grid">
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1516575360438-15160eda2141?q=80&w=300&auto=format&fit=crop" alt="Local Shifting"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-truck-ramp-box"></i>
+                    </div>
                     <h3>Local Shifting</h3>
                     <p>Fast and hassle-free household shifting within your city with same-day setup.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=300&auto=format&fit=crop" alt="Inter-City Moving"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
                     <h3>Inter-City Moving</h3>
                     <p>Reliable domestic relocation services across states with real-time GPS tracking.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=300&auto=format&fit=crop" alt="Bike Courier"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
                     <h3>Bike Courier</h3>
                     <p>Safe scratch-free bike and scooter transport using special multi-layer packing.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=300&auto=format&fit=crop" alt="Industrial Logistics"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-boxes-packing"></i>
+                    </div>
                     <h3>Industrial Logistics</h3>
                     <p>Shifting of heavy machinery, warehouse goods, and industrial equipment safely.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=300&auto=format&fit=crop" alt="Fragile Items"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-wine-glass"></i>
+                    </div>
                     <h3>Fragile Items Moving</h3>
                     <p>Special customized wooden crating for delicate glassware, paintings, and antiques.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=300&auto=format&fit=crop" alt="Pet Relocation"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-paw"></i>
+                    </div>
                     <h3>Pet Relocation</h3>
                     <p>Safe, comfortable, and stress-free relocation services for your beloved pets.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=300&auto=format&fit=crop" alt="Parcel Service"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-suitcase"></i>
+                    </div>
                     <h3>Luggage Delivery</h3>
                     <p>Single room shifting or sending small luggage packages at highly economical rates.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
                 <div class="services-card">
-                    <div class="service-img-box"><img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=300&auto=format&fit=crop" alt="Plant Shifting"></div>
+                    <div class="service-icon-circle">
+                        <i class="fas fa-seedling"></i>
+                    </div>
                     <h3>House Plant Moving</h3>
                     <p>Dedicated and careful handling to transport your indoor and balcony plants safely.</p>
                     <a href="#" class="know-more-btn">Know More <i class="fas fa-arrow-right"></i></a>
                 </div>
+
             </div>
         </div>
     </section>

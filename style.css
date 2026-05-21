@@ -331,10 +331,7 @@ body {
 .service-card:hover, .service-card.active-card {
     border-color: #e31e24; /* Red border on hover */
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.card-icon {
-    margin-bottom: 25px;
+    transform: translateY(-8px);
 }
 
 .icon-square {
@@ -358,11 +355,311 @@ body {
     margin-bottom: 25px;
 }
 
-.read-more {
-    color: #e31e24;
-    text-decoration: none;
+    /* Improved services card hover and Know More button animation */
+    .services-section > div > div {
+        border-radius: 12px;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        border: 1px solid transparent;
+    }
+
+    .services-section > div > div:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+        border-color: rgba(227, 30, 36, 0.18);
+    }
+
+    .services-section > div > div a[href="services.html"] {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 15px !important;
+        padding: 10px 18px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        background-color: #0b122c !important;
+        border-radius: 8px !important;
+        border: 2px solid transparent !important;
+        text-decoration: none !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease !important;
+    }
+
+    .services-section > div > div a[href="services.html"] i {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .services-section > div > div a[href="services.html"]:hover {
+        transform: translateY(-2px);
+        background-color: #e31e24 !important;
+        color: #ffffff !important;
+        box-shadow: 0 8px 18px rgba(227, 30, 36, 0.24);
+    }
+
+    .services-section > div > div a[href="services.html"]:hover i {
+        transform: translateX(4px);
+    }
+
+/* --- SETTLEMENT PARTNER CARDS --- */
+.settlement-section {
+    background-color: #0B122C;
+    padding: 60px 4% 60px 4%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.settlement-section .settlement-header h2 {
+    color: #ffffff;
+    font-size: 24px;
     font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.settlement-section .settlement-header p {
+    color: #A0AEC0;
+    font-size: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.settlement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.settlement-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.settlement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.settlement-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.settlement-card h3 {
+    color: #0B122C;
     font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.settlement-card p {
+    color: #718096;
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+.settlement-link {
+    background-color: #0B122C;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.settlement-link:hover {
+    transform: translateY(-2px);
+    background-color: #e31e24;
+    box-shadow: 0 8px 18px rgba(227, 30, 36, 0.24);
+}
+
+.settlement-footer {
+    margin-top: 35px;
+}
+
+.settlement-view-all {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 28px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: 0.3s;
+}
+
+.settlement-view-all:hover {
+    background-color: rgba(255,255,255,0.08);
+}
+
+/* --- RESPONSIVE ADAPTIVE STYLING --- */
+.nav-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+.btn-outline-white {
+    background-color: transparent;
+    color: #151a30;
+    border: 2px solid #151a30;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+.top-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    color: #4b5563;
+    font-size: 13px;
+}
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    color: #151a30;
+    text-decoration: none;
+}
+.social-icon:hover {
+    background: #e31e24;
+    color: #ffffff;
+}
+@media (max-width: 1040px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 6%;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .stats-grid,
+    .services-grid,
+    .responsibility-section {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px 5%;
+    }
+
+    .nav-main {
+        justify-content: flex-start;
+    }
+
+    .nav-main a,
+    .btn-red,
+    .btn-outline-white {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-text p,
+    .sub-text,
+    .resp-content p {
+        font-size: 14px;
+    }
+
+    .stats-grid {
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 540px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-red,
+    .btn-outline-white {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .image-placeholder {
+        height: 280px;
+    }
+
+    .enquiry-form {
+        padding: 22px;
+    }
 }
 /* --- STATS SECTION --- */
 .stats-section {
@@ -1753,4 +2050,734 @@ header, .top-bar, .nav-main {
 /* Arrow (Tir) thoda aage khiskega */
 .settlement-card .know-more-btn:hover i {
     transform: translateX(5px); 
+}
+/* ========================================== */
+/* 📱 MOBILE OPTIMIZED NAVBAR CSS             */
+/* ========================================== */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 4%;
+    flex-wrap: wrap; /* Phone par logo aur menu ko upar-neeche adjust karne ke liye */
+    gap: 10px;
+}
+
+.nav-main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Phone par links automatic doosri line me aa jayenge */
+    gap: 12px; /* Phone ke liye thoda gap kam kiya */
+}
+
+.nav-main a {
+    text-decoration: none;
+    color: #151a30;
+    font-weight: 600;
+    font-size: 13px; /* Phone par perfectly fit aane ke liye font thoda chhota kiya */
+    transition: 0.3s;
+    white-space: nowrap; /* Text tootega nahi */
+}
+
+/* Mobile responsive ke liye media query update */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Phone par Logo upar aur Menu links neeche aa jayenge */
+        text-align: center;
+    }
+    .nav-main {
+        justify-content: center;
+        width: 100%;
+        padding: 5px 0;
+    }
+    .btn-red {
+        padding: 8px 15px !important;
+        font-size: 12px !important;
+    }
+}
+/* ========================================== */
+/* 🎬 CARDS & BUTTONS ANIMATION MODULE        */
+/* ========================================== */
+
+/* 1. Card Base Transition (Smoothness ke liye) */
+.figma-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
+}
+
+/* 🎯 Hover: Card Upar Uthega aur Red Glow Karega */
+.figma-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(227, 30, 36, 0.2) !important;
+}
+
+/* 2. Image Transition */
+.figma-img-box img {
+    transition: transform 0.5s ease !important;
+}
+
+/* 🎯 Hover: Image Smoothly Zoom Hogi */
+.figma-card:hover .figma-img-box img {
+    transform: scale(1.08) !important;
+}
+
+/* 3. Know More Button & Arrow Transition */
+.figma-btn {
+    transition: background-color 0.3s ease-in-out !important;
+}
+.figma-btn i {
+    transition: transform 0.3s ease, color 0.3s ease !important;
+}
+
+/* 🎯 Hover: Button Red Hoga aur Arrow Bahar Niklega */
+.figma-card:hover .figma-btn {
+    background-color: #E31E24 !important;
+}
+.figma-card:hover .figma-btn i {
+    color: #ffffff !important;
+    transform: translate(3px, -3px) !important; /* Diagonal movement */
+}
+
+/* 4. "View All" Buttons Animations */
+.btn-solid-red {
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+.btn-solid-red:hover {
+    background-color: #b51217 !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-outline-white {
+    transition: all 0.3s ease !important;
+}
+.btn-outline-white i {
+    transition: transform 0.3s ease !important;
+}
+
+/* 🎯 Hover: Outline button Red ban jayega aur arrow aage jayega */
+.btn-outline-white:hover {
+    background-color: #E31E24 !important;
+    border-color: #E31E24 !important;
+    transform: translateY(-2px) !important;
+}
+.btn-outline-white:hover i {
+    transform: translateX(4px) !important;
+}
+/* ==========================================================================
+   🎬 FIGMA MODULE: DYNAMIC CARDS & GRID SYSTEM (HOMEPAGE & SERVICES)
+   ========================================================================== */
+
+/* Grid Architecture */
+.figma-section {
+    background-color: #0B122C;
+    padding: 70px 4%;
+    text-align: center;
+}
+
+.bg-darker {
+    background-color: #070B1E !important; /* Settlement section ke liye alag dark tone */
+}
+
+.section-title-block {
+    margin-bottom: 45px;
+}
+
+.section-title-block h2 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.section-title-block p {
+    color: #A0AEC0;
+    font-size: 13px;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.figma-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🎯 Premium White Card Base & Lift Hover Effect */
+.figma-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.25);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
+    cursor: pointer;
+}
+
+.figma-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(227, 30, 36, 0.2) !important; /* Elegant Red Glow */
+}
+
+/* 🎯 Image Container & Smooth Zoom Effect */
+.figma-img-box {
+    width: 100%;
+    height: 145px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.figma-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease !important;
+}
+
+.figma-card:hover .figma-img-box img {
+    transform: scale(1.08) !important;
+}
+
+/* Card Typography */
+.figma-card h3 {
+    color: #0B122C;
+    font-size: 14.5px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.figma-card p {
+    color: #718096;
+    font-size: 11.5px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   🔘 BUTTONS & FLIGHT ARROW ANIMATIONS
+   ========================================================================== */
+
+/* Know More Button Specs */
+.figma-btn {
+    background-color: #0B122C;
+    color: #ffffff !important;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease-in-out !important;
+}
+
+.figma-btn i {
+    font-size: 10px;
+    margin-left: 5px;
+    color: #E31E24;
+    transition: transform 0.3s ease, color 0.3s ease !important;
+}
+
+/* Hover: Button turns Red & Arrow flies diagonally */
+.figma-card:hover .figma-btn {
+    background-color: #E31E24 !important;
+}
+
+.figma-card:hover .figma-btn i {
+    color: #ffffff !important;
+    transform: translate(3px, -3px) !important;
+}
+
+/* Global Section Bottom Buttons */
+.center-btn-wrapper {
+    margin-top: 40px;
+}
+
+.btn-solid-red {
+    background-color: #E31E24;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+
+.btn-solid-red:hover {
+    background-color: #b51217 !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 28px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-white i {
+    transition: transform 0.3s ease !important;
+}
+
+.btn-outline-white:hover {
+    background-color: #E31E24 !important;
+    border-color: #E31E24 !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-outline-white:hover i {
+    transform: translateX(4px) !important; /* Arrow shifts right */
+}
+
+/* ==========================================================================
+   📖 ABOUT US PAGE CUSTOM DESIGN SYSTEM
+   ========================================================================== */
+
+.about-banner {
+    background-color: #0B122C;
+    padding: 80px 4%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-banner h1 {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.about-banner p {
+    color: #A0AEC0;
+    font-size: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-content-section {
+    padding: 70px 4%;
+    background-color: #f4f6f9;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #0B122C;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 14.5px;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.02); /* Delicate breathing zoom on team image */
+}
+
+/* Icon Bullets Style */
+.features-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.features-list li {
+    font-size: 14px;
+    color: #0B122C;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li i {
+    color: #E31E24;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+/* Stats Dashboard Box inside About */
+.stats-wrapper {
+    background-color: #0B122C;
+    padding: 50px 4%;
+    margin-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(11, 18, 44, 0.15);
+}
+
+.stat-box {
+    min-width: 150px;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: scale(1.1); /* Interactive micro-bounce */
+}
+
+.stat-box h3 {
+    font-size: 36px;
+    color: #E31E24;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+/* ==========================================================================
+   📖 ABOUT US PAGE CUSTOM DESIGN SYSTEM
+   ========================================================================== */
+
+/* 🌌 Dark Navy Banner with Text Styling */
+.about-banner {
+    background-color: #0B122C;
+    padding: 80px 4%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-banner h1 {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.about-banner p {
+    color: #A0AEC0;
+    font-size: 15px;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 📖 Main Layout (Text + Image Side by Side) */
+.about-content-section {
+    padding: 70px 4%;
+    background-color: #f4f6f9;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    color: #0B122C;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.about-text p {
+    font-size: 14.5px;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+/* Hover par team image halki si saans legi (Zoom in) */
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+/* 🌀 Icon Animations for "Why Choose Us" Cards */
+.icon-box-animate i {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease !important;
+}
+
+/* 🎯 Hover: Icon zoom hoga, halka sa rotate hoga aur Laal rang ka ban jayega */
+.figma-card:hover .icon-box-animate i {
+    transform: scale(1.2) rotate(8deg) !important;
+    color: #E31E24 !important;
+}
+
+/* 📊 Stats Dashboard Box */
+.stats-wrapper {
+    background-color: #0B122C;
+    padding: 40px 4%;
+    margin-top: 50px;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(11, 18, 44, 0.15);
+    width: 100%;
+}
+
+.stat-box {
+    min-width: 150px;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Stats box interactive micro-bounce */
+.stat-box:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.stat-box h3 {
+    font-size: 38px;
+    color: #E31E24;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   📱 MOBILE RESPONSIVE FIXES (About Us Page)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .about-banner {
+        padding: 60px 4%;
+    }
+    .about-banner h1 {
+        font-size: 28px;
+    }
+    .about-text h2 {
+        font-size: 24px;
+    }
+    /* Phone par stats ek ke neeche ek aayenge */
+    .stats-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 4%;
+    }
+}
+/* ==========================================================================
+   📖 NEW ABOUT US PAGE EXTENSIONS & FIXES
+   ========================================================================== */
+
+/* Utility Classes */
+.no-underline { text-decoration: none !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.d-block { display: block !important; }
+.mt-0 { margin-top: 0 !important; }
+
+/* Tagline Style */
+.tagline-quote {
+    margin-top: 25px;
+    font-weight: 800;
+    font-size: 24px;
+    color: #0B122C;
+    text-transform: uppercase;
+    border-left: 5px solid #E31E24;
+    padding-left: 15px;
+}
+
+/* ==========================================================================
+   🌀 ICON ANIMATIONS (Why Choose Us Cards)
+   ========================================================================== */
+.icon-box-animate {
+    font-size: 45px;
+    color: #0B122C;
+    margin-bottom: 20px;
+}
+
+.icon-box-animate i {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease !important;
+}
+
+/* Hover Effect on Icon */
+.figma-card:hover .icon-box-animate i {
+    transform: scale(1.2) rotate(8deg) !important;
+    color: #E31E24 !important;
+}
+
+/* ==========================================================================
+   👔 DIRECTOR SECTION STYLING (Dark Theme)
+   ========================================================================== */
+.director-section {
+    background-color: #0B122C;
+}
+
+.director-card-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.director-card {
+    text-align: center;
+    max-width: 320px;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* Image Box Animation */
+.director-img-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid #E31E24;
+    box-shadow: 0 10px 20px rgba(227, 30, 36, 0.2);
+}
+
+.director-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.figma-card:hover .director-img-box img {
+    transform: scale(1.1); /* Photo zooms in slightly on hover */
+}
+
+/* Director Text Styling in Card */
+.director-card h3 {
+    color: #0B122C;
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.director-title {
+    color: #E31E24 !important;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 20px !important;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #0B122C;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #E31E24;
+    transform: translateY(-3px);
+}
+
+/* Director's Message Content (Right Side) */
+.director-message-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.director-message-text h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.director-message-text p {
+    font-size: 15px;
+    color: #A0AEC0;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.director-message-text .quote-italic {
+    font-style: italic;
+}
+
+.director-message-text h4 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 25px;
+    font-weight: 700;
 }
