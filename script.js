@@ -36,45 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. MOBILE MENU TOGGLE
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const navMain = document.querySelector('.nav-main');
-
-    if (mobileToggle && navMain) {
-        const updateToggleIcon = () => {
-            const isOpen = navMain.classList.contains('nav-open');
-            mobileToggle.innerHTML = isOpen
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
-            mobileToggle.setAttribute('aria-expanded', isOpen.toString());
-        };
-
-        updateToggleIcon();
-        mobileToggle.addEventListener('click', () => {
-            navMain.classList.toggle('nav-open');
-            updateToggleIcon();
-        });
-
-        navMain.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navMain.classList.contains('nav-open')) {
-                    navMain.classList.remove('nav-open');
-                    updateToggleIcon();
-                }
-            });
-        });
-    }
-
-    document.addEventListener('click', (e) => {
-        if (navMain && navMain.classList.contains('nav-open')) {
-            const isClickInside = navMain.contains(e.target) || mobileToggle.contains(e.target);
-            if (!isClickInside) {
-                navMain.classList.remove('nav-open');
-                if (mobileToggle) updateToggleIcon();
-            }
-        }
-    });
-
     // 3. PREVENT EMPTY LINKS & ADD SMOOTH SCROLL
     const allLinks = document.querySelectorAll('a');
 
