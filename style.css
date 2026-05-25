@@ -55,6 +55,23 @@ body {
 .header-container {
     display: flex; justify-content: space-between; align-items: center;
     max-width: 1300px; margin: 0 auto; padding: 0 4%;
+    position: relative;
+}
+.mobile-menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #151a30;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+.mobile-menu-toggle:hover {
+    background-color: rgba(227, 30, 36, 0.08);
 }
 .company-logo { color: #151a30; margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
 .text-red { color: #e31e24; }
@@ -63,6 +80,7 @@ body {
 .nav-main a {
     text-decoration: none; color: #151a30; font-weight: 600;
     font-size: 14px; transition: 0.3s;
+    white-space: nowrap;
 }
 .nav-main a:not(.btn-red):hover { color: #e31e24; }
 
