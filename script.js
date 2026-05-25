@@ -100,3 +100,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// ==========================================
+// ⚡ MAHIMA PACKERS - MOBILE MENU SCRIPT
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // HTML elements ko select kar rahe hain
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (mobileMenuBtn && navMenu) {
+        // Jab Hamburger button par click ho
+        mobileMenuBtn.addEventListener("click", function() {
+            
+            // Menu me 'mobile-active' class add/remove karo
+            navMenu.classList.toggle("mobile-active");
+            
+            // Icon ko change karne ka logic (Bars to Cross)
+            const icon = mobileMenuBtn.querySelector("i");
+            if (navMenu.classList.contains("mobile-active")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-times"); // Menu khula toh 'X' dikhao
+            } else {
+                icon.classList.remove("fa-times");
+                icon.classList.add("fa-bars"); // Menu band toh '3-lines' dikhao
+            }
+        });
+    }
+
+    // Ek aur zaruri feature: Jab user kisi link par click kare, toh menu apne aap band ho jaye
+    const navLinks = document.querySelectorAll(".nav-main a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            if(navMenu.classList.contains("mobile-active")) {
+                navMenu.classList.remove("mobile-active");
+                
+                // Icon ko wapas set karo
+                const icon = mobileMenuBtn.querySelector("i");
+                if (icon) {
+                    icon.classList.remove("fa-times");
+                    icon.classList.add("fa-bars");
+                }
+            }
+        });
+    });
+});

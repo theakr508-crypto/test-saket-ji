@@ -3754,3 +3754,84 @@ header, .top-bar, .nav-main {
     margin-top: 25px;
     font-weight: 700;
 }
+/* ==========================================================================
+   📱 ULTIMATE MOBILE RESPONSIVENESS FIXES (Phone View)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    /* 1. Mobile Hamburger Menu Fix */
+    .menu-toggle {
+        display: block !important;
+    }
+    
+    .nav-main {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 65px; /* Navbar ke theek neeche */
+        left: 0;
+        padding: 20px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .nav-main.mobile-active {
+        display: flex !important;
+    }
+
+    /* 2. Fix About & Director Sections (Stack items vertically) */
+    .about-container {
+        gap: 30px !important;
+        flex-direction: column !important;
+    }
+
+    .about-text, .about-image, .director-card-wrapper, .director-message-text {
+        min-width: 100% !important;
+        width: 100% !important;
+        text-align: center; /* Phone par center text zyada clean lagta hai */
+    }
+
+    .tagline-quote {
+        font-size: 20px !important;
+        text-align: left;
+    }
+
+    /* 3. Typography Adjustments (Make Headings Smaller) */
+    .about-banner {
+        padding: 50px 4% !important;
+    }
+
+    .about-banner h1 {
+        font-size: 26px !important;
+    }
+
+    .about-text h2, .director-message-text h2 {
+        font-size: 24px !important;
+    }
+
+    /* 4. Fix Stats Dashboard (Stack vertically instead of horizontally) */
+    .stats-wrapper {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 30px 4% !important;
+    }
+
+    .stat-box {
+        margin: 10px 0 !important;
+    }
+
+    /* 5. Fix Director Card width for small screens */
+    .director-card {
+        padding: 30px 15px !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 6. Fix "Why Choose Us" Grid */
+    .figma-grid {
+        grid-template-columns: 1fr !important; /* Phone par 1 column */
+    }
+}
