@@ -36,7 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. PREVENT EMPTY LINKS & ADD SMOOTH SCROLL
+    // 2. MOBILE MENU TOGGLE
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMain = document.querySelector('.nav-main');
+
+    if (mobileToggle && navMain) {
+        mobileToggle.addEventListener('click', () => navMain.classList.toggle('nav-open'));
+    }
+
+    document.addEventListener('click', (e) => {
+        if (navMain && navMain.classList.contains('nav-open')) {
+            const isClickInside = navMain.contains(e.target) || mobileToggle.contains(e.target);
+            if (!isClickInside) {
+                navMain.classList.remove('nav-open');
+            }
+        }
+    });
+
+    // 3. PREVENT EMPTY LINKS & ADD SMOOTH SCROLL
     const allLinks = document.querySelectorAll('a');
 
     allLinks.forEach(link => {

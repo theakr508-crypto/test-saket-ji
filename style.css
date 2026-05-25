@@ -563,11 +563,15 @@ body {
     background: #e31e24;
     color: #ffffff;
 }
+/* ========================================== */
+/* 📱 TABLET RESPONSIVE (1024px - 1040px) 📱  */
+/* ========================================== */
 @media (max-width: 1040px) {
     .hero {
         flex-direction: column;
         align-items: flex-start;
         padding: 50px 6%;
+        gap: 30px;
     }
 
     .hero-text,
@@ -578,6 +582,7 @@ body {
 
     .hero-text h1 {
         font-size: 3rem;
+        line-height: 1.1;
     }
 
     .input-group {
@@ -585,37 +590,131 @@ body {
         gap: 16px;
     }
 
-    .stats-grid,
-    .services-grid,
+    .stats-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .stat-item {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 150px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .settlement-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .impact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .insights-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .insight-card {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 200px;
+    }
+
     .responsibility-section {
         flex-direction: column;
-        gap: 25px;
+        gap: 40px;
+        padding: 60px 6%;
+    }
+
+    .resp-content {
+        width: 100%;
+    }
+
+    .resp-image {
+        width: 100%;
+    }
+
+    .process-flex-container {
+        gap: 20px;
+    }
+
+    .footer-main {
+        flex-wrap: wrap;
+        gap: 30px;
     }
 }
 
+/* ========================================== */
+/* 📱 TABLET & LARGE PHONE (768px - 1023px) 📱 */
+/* ========================================== */
 @media (max-width: 768px) {
     .header-container {
         flex-wrap: wrap;
         gap: 15px;
         padding: 12px 5%;
+        justify-content: space-between;
+    }
+
+    .company-logo {
+        font-size: 18px;
+        flex-grow: 1;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-flex;
     }
 
     .nav-main {
-        justify-content: flex-start;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 18px 20px 20px;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+        z-index: 9998;
+        width: 100%;
     }
 
-    .nav-main a,
-    .btn-red,
-    .btn-outline-white {
+    .nav-main.nav-open {
+        display: flex;
+    }
+
+    .nav-main a {
+        width: 100%;
+        padding: 14px 0;
+        border-bottom: 1px solid #f1f5f9;
+        text-align: left;
         font-size: 13px;
+    }
+
+    .nav-main a:last-child {
+        border-bottom: none;
     }
 
     .hero {
         padding: 35px 5%;
+        gap: 25px;
     }
 
     .hero-text h1 {
         font-size: 2.4rem;
+        line-height: 1.1;
     }
 
     .hero-text p,
@@ -624,41 +723,679 @@ body {
         font-size: 14px;
     }
 
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons > * {
+        width: 100%;
+    }
+
+    .image-placeholder {
+        height: 280px;
+        border-radius: 15px 150px 150px 15px;
+    }
+
+    .badge {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        font-size: 16px;
+        right: -10px;
+        top: 10px;
+    }
+
+    .enquiry-section {
+        padding: 0 4% 40px 4%;
+    }
+
+    .enquiry-form {
+        padding: 25px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .services-grid,
+    .settlement-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .services-section,
+    .settlement-section {
+        padding: 50px 5%;
+    }
+
     .stats-grid {
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 25px;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 30px;
     }
 
     .stat-item {
         width: 100%;
     }
 
-    .services-grid {
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+
+    .stat-item p {
+        font-size: 12px;
+    }
+
+    .faq-grid,
+    .insights-grid,
+    .cities-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 540px) {
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        gap: 18px;
     }
 
-    .btn-red,
-    .btn-outline-white {
+    .faq-col {
         width: 100%;
+    }
+
+    .insight-card {
+        flex: 1;
+    }
+
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .impact-card {
+        padding: 18px 12px;
+        font-size: 11px;
+    }
+
+    .testimonial-grid {
+        flex-direction: column;
+    }
+
+    .brands-flex {
+        gap: 30px;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
+    .brand-logo {
+        font-size: 22px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 5%;
+        gap: 25px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        padding: 18px 5%;
+    }
+
+    .footer-bottom p {
+        width: 100%;
+        margin: 0;
+    }
+
+    .footer-banner {
+        padding: 40px 5%;
+    }
+
+    .footer-banner h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-red,
+    .btn-white,
+    .btn-outline-white,
+    .btn-dark {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .presence-section .map-container {
+        padding-bottom: 80px;
+    }
+
+    .map-btn {
+        position: static;
+        transform: none;
+        margin: 18px auto 0;
+        width: min(100%, 320px);
+    }
+
+    .process-flex-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .process-center-img {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .move-img {
+        width: 280px;
+    }
+
+    .process-col {
+        gap: 25px;
+    }
+
+    .process-col.left .process-card::after,
+    .process-col.right .process-card::after {
+        display: none;
+    }
+
+    .responsibility-section {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+
+    .video-placeholder {
+        height: 240px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
+
+    .pan-india-section {
+        padding: 50px 5%;
+    }
+}
+
+/* ========================================== */
+/* 📱 SMALL PHONE (480px - 540px) 📱           */
+/* ========================================== */
+@media (max-width: 540px) {
+    html, body {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .header-container {
+        padding: 10px 4%;
+        gap: 8px;
+    }
+
+    .company-logo {
+        font-size: 16px;
+        letter-spacing: -1px;
+    }
+
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        padding: 25px 4%;
+        gap: 20px;
+    }
+
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn-red,
+    .btn-outline,
+    .btn-outline-white,
+    .btn-submit,
+    .map-btn,
+    .btn-dark,
+    .btn-white {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 13px;
     }
 
     .image-placeholder {
-        height: 280px;
+        height: 240px;
+    }
+
+    .badge {
+        width: 50px;
+        height: 50px;
+        font-size: 13px;
+        padding: 8px;
+        right: -8px;
+        top: 8px;
+    }
+
+    .badge span {
+        font-size: 8px;
+    }
+
+    .enquiry-section {
+        padding: 0 4% 30px 4%;
+    }
+
+    .enquiry-container {
+        border-radius: 15px;
+    }
+
+    .enquiry-header {
+        padding: 12px;
+        font-size: 12px;
     }
 
     .enquiry-form {
-        padding: 22px;
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .input-group input {
+        padding: 8px 0;
+        font-size: 13px;
+    }
+
+    .checkbox-group {
+        font-size: 11px;
+    }
+
+    .services-section {
+        padding: 40px 4%;
+    }
+
+    .services-section h2 {
+        font-size: 22px;
+    }
+
+    .services-section > div:first-child p {
+        font-size: 12px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .services-section > div > div {
+        padding: 12px;
+    }
+
+    .services-section > div > div img {
+        height: 120px;
+    }
+
+    .services-section > div > div h3 {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .services-section > div > div p {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .services-section > div > div a {
+        padding: 8px !important;
+        font-size: 11px !important;
+    }
+
+    .stats-section {
+        padding: 40px 4%;
+    }
+
+    .stats-grid {
+        border-top: 1px solid #e5e7eb;
+        padding-top: 20px;
+        gap: 15px;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .stat-item p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .settlement-section {
+        padding: 40px 4%;
+    }
+
+    .settlement-header h2 {
+        font-size: 20px;
+    }
+
+    .settlement-header p {
+        font-size: 11px;
+    }
+
+    .settlement-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .settlement-card {
+        padding: 12px;
+    }
+
+    .settlement-card img {
+        height: 120px;
+        margin-bottom: 12px;
+    }
+
+    .settlement-card h3 {
+        font-size: 13px;
+    }
+
+    .settlement-card p {
+        font-size: 11px;
+    }
+
+    .settlement-link {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .section-header h2 {
+        font-size: 20px;
+    }
+
+    .section-header p {
+        font-size: 12px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-item summary {
+        padding: 15px 18px;
+        font-size: 12px;
+    }
+
+    .faq-answer {
+        padding: 15px 18px;
+        font-size: 11px;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insight-card {
+        border-radius: 12px;
+    }
+
+    .insight-img {
+        height: 140px;
+    }
+
+    .insight-content {
+        padding: 18px 15px;
+    }
+
+    .insight-content h4 {
+        font-size: 13px;
+    }
+
+    .insight-content p {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+
+    .read-more-btn {
+        padding: 6px 18px;
+        font-size: 11px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .impact-card {
+        padding: 15px 10px;
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .cities-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .city-col p {
+        font-size: 11px;
+        margin-bottom: 18px;
+    }
+
+    .brands-flex {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .brand-logo {
+        font-size: 18px;
+    }
+
+    .responsibility-section {
+        flex-direction: column;
+        padding: 40px 4%;
+        gap: 25px;
+    }
+
+    .resp-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .resp-content p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .btn-dark {
+        display: inline-block;
+    }
+
+    .move-process {
+        padding: 40px 0;
+    }
+
+    .process-flex-container {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .process-center-img {
+        order: -1;
+        margin-bottom: 15px;
+    }
+
+    .move-img {
+        width: 240px;
+    }
+
+    .process-col {
+        gap: 20px;
+    }
+
+    .process-card {
+        padding: 18px 15px;
+    }
+
+    .process-card h4 {
+        font-size: 15px;
+    }
+
+    .process-card p {
+        font-size: 12px;
+    }
+
+    .card-icon {
+        font-size: 28px;
+    }
+
+    .footer-banner {
+        padding: 35px 4%;
+    }
+
+    .footer-banner h2 {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+        line-height: 1.2;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        padding: 30px 4%;
+        gap: 20px;
+    }
+
+    .footer-col {
+        text-align: left;
+        width: 100%;
+    }
+
+    .brand-col {
+        text-align: center;
+    }
+
+    .brand-col h2 {
+        font-size: 24px;
+    }
+
+    .brand-col p {
+        font-size: 13px;
+    }
+
+    .links-col a {
+        font-size: 12px;
+    }
+
+    .contact-col p {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        padding: 15px 4%;
+        font-size: 11px;
+    }
+
+    .pan-india-section {
+        padding: 40px 4%;
+    }
+
+    .presence-section {
+        padding: 40px 4% 60px 4%;
+    }
+
+    .map-container {
+        margin-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .map-btn {
+        position: static;
+        transform: none;
+        margin: 15px auto 0;
+        width: 100%;
+        padding: 11px 18px;
+        font-size: 12px;
+    }
+
+    .exact-map {
+        max-width: 100%;
+    }
+
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    .top-social-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .social-text {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .contact-dropdown .btn-red {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .dropdown-content {
+        min-width: 140px;
+    }
+
+    .dropdown-content a {
+        padding: 10px 14px;
+        font-size: 12px;
     }
 }
 /* --- STATS SECTION --- */
@@ -1448,6 +2185,169 @@ body {
 .settlement-grid .settlement-card:nth-child(5) .card-image { background-image: url('images/settle5.jpg'); background-size: cover; background-position: center; }
 .settlement-grid .settlement-card:nth-child(6) .card-image { background-image: url('images/settle6.jpg'); background-size: cover; background-position: center; }
 .settlement-grid .settlement-card:nth-child(7) .card-image { background-image: url('images/settle7.jpg'); background-size: cover; background-position: center; }
+
+/* --- PHONE + DESKTOP FRIENDLY RESPONSIVE ENHANCEMENTS --- */
+.header-container {
+    position: relative;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    border: 1px solid rgba(21, 26, 48, 0.12);
+    background: #ffffff;
+    color: #151a30;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.mobile-menu-toggle:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 980px) {
+    .nav-main {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-main a {
+        padding: 8px 10px;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .footer-main {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 6%;
+    }
+
+    .footer-bottom {
+        padding: 18px 6%;
+    }
+
+    .brands-flex {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: inline-flex;
+    }
+
+    .nav-main {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 18px 20px 20px;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+        z-index: 9998;
+    }
+
+    .nav-main.nav-open {
+        display: flex;
+    }
+
+    .nav-main a {
+        width: 100%;
+        padding: 14px 0;
+        border-bottom: 1px solid #f1f5f9;
+        text-align: left;
+    }
+
+    .nav-main a:last-child {
+        border-bottom: none;
+    }
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+    .footer-main {
+        padding: 35px 5%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .footer-bottom p {
+        width: 100%;
+        margin: 0;
+    }
+
+    .faq-grid,
+    .insights-grid,
+    .brands-flex,
+    .cities-grid,
+    .impact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .presence-section .map-container {
+        padding-bottom: 80px;
+    }
+
+    .map-btn {
+        position: static;
+        transform: none;
+        margin: 18px auto 0;
+        width: min(100%, 320px);
+    }
+}
+
+@media (max-width: 540px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons,
+    .banner-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-red,
+    .btn-outline,
+    .btn-outline-white,
+    .btn-submit,
+    .map-btn {
+        width: 100%;
+    }
+
+    .enquiry-section {
+        padding: 0 4% 40px 4%;
+    }
+
+    .footer-bottom {
+        padding: 18px 4%;
+    }
+
+    .impact-card {
+        padding: 18px 12px;
+        font-size: 12px;
+    }
+}
 .settlement-grid .settlement-card:nth-child(8) .card-image { background-image: url('images/settle8.jpg'); background-size: cover; background-position: center; }
 /* --- MOVING INSIGHTS & TIPS CARDS LOCAL IMAGES MAPPING --- */
 
@@ -1727,30 +2627,85 @@ body {
     }
 }
 /* ========================================== */
-/* 🛑 ANTI-STRETCH / ANTI-OVERFLOW FIX 🛑     */
+/* � EXTRA SMALL PHONE (< 380px) 📱           */
 /* ========================================== */
+@media (max-width: 380px) {
+    .hero {
+        padding: 20px 3%;
+    }
 
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+    }
+
+    .image-placeholder {
+        height: 200px;
+    }
+
+    .badge {
+        width: 45px;
+        height: 45px;
+        font-size: 11px;
+    }
+
+    .services-section {
+        padding: 30px 3%;
+    }
+
+    .services-section h2 {
+        font-size: 18px;
+    }
+
+    .services-grid {
+        gap: 12px;
+    }
+
+    .settlement-grid {
+        gap: 12px;
+    }
+
+    .stat-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer-banner h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-item summary {
+        padding: 12px 15px;
+        font-size: 11px;
+    }
+
+    .process-card {
+        padding: 15px 12px;
+    }
+
+    .move-img {
+        width: 200px;
+    }
+}
+
+/* ========================================== */
+/* 🌀 ANTI-OVERFLOW SAFETY NET 🌀             */
+/* ========================================== */
 @media screen and (max-width: 768px) {
     html, body {
-        width: 100vw !important;
-        max-width: 100vw !important;
+        width: 100% !important;
+        max-width: 100% !important;
         overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
     }
 
-    /* Har ek section aur dabbe ko chhota karne ka order */
-    section, div, img, p, h1, h2, h3 {
-        max-width: 100vw !important;
-    }
-
-    /* Dotted lines ko permanent maar do phone pe */
+    /* Remove dotted lines on mobile */
+    .process-col.left .process-card::after,
+    .process-col.right .process-card::after,
     .process-column:first-child .step-card::after,
-    .process-column:last-child .step-card::after,
-    .step-card::after {
+    .process-column:last-child .step-card::after {
         display: none !important;
-        width: 0 !important;
-        content: none !important;
     }
 }
 /* ========================================== */
