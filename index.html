@@ -3,86 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahima Packers & Movers</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mahima Packers & Movers - Expert Care. Seamless Moves.</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </head>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div id="preloader">
-        <div class="loader-logo">mahima</div>
-        <div class="loader-line"></div>
+
+    <!-- 1. Preloader Screen -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo-m">M</div>
+            <h2 class="loader-logo-text">mahima</h2>
+            <div class="loader-truck-container">
+                <div class="loader-truck-body">
+                    <div class="truck-cargo">
+                        <span class="cargo-logo">mahima</span>
+                    </div>
+                    <div class="truck-cabin">
+                        <div class="truck-window"></div>
+                    </div>
+                    <div class="truck-wheel wheel-front"></div>
+                    <div class="truck-wheel wheel-back"></div>
+                    <div class="truck-exhaust"></div>
+                </div>
+                <div class="loader-road"></div>
+            </div>
+        </div>
     </div>
 
-    <header class="main-header" style="background-color: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; padding: 15px 4%;">
-        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1250px; margin: 0 auto; flex-wrap: wrap; gap: 20px;">
-            
-            <div class="logo-area" style="display: flex; align-items: center; flex: 1 1 auto; min-width: 200px;">
-                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                    <div style="background-color: #E31E24; color: white; padding: 4px 8px; font-weight: bold; font-size: 16px; border-radius: 4px;">M</div>
-                    <div>
-                        <h2 style="font-size: 18px; font-weight: 800; color: #0B122C; margin: 0; letter-spacing: -0.5px; line-height: 1;">mahima</h2>
-                        <span style="font-weight: 600; font-size: 10px; color: #718096; letter-spacing: 0.5px;">PACKERS & MOVERS</span>
+    <!-- 2. Main Header / Navigation -->
+    <header class="main-header-section">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-m">M</div>
+                    <div class="logo-text">
+                        <h2 class="company-logo">mahima</h2>
+                        <span class="logo-sub">PACKERS & MOVERS</span>
                     </div>
                 </a>
             </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
             
-            <nav style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center; flex: 2 1 auto;">
-                <a href="index.html" style="text-decoration: none; color: #E31E24; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px;">Home</a>
-                
-                <a href="about.html" style="text-decoration: none; color: #0B122C; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#E31E24'" onmouseout="this.style.color='#0B122C'">About Us</a>
-                
-                <a href="services.html" style="text-decoration: none; color: #0B122C; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; display: flex; align-items: center; gap: 4px;" onmouseover="this.style.color='#E31E24'" onmouseout="this.style.color='#0B122C'">
-                    Services <i class="fas fa-chevron-down" style="font-size: 9px; color: #718096;"></i>
-                </a>
-                
-                <a href="#" style="text-decoration: none; color: #0B122C; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; display: flex; align-items: center; gap: 4px;" onmouseover="this.style.color='#E31E24'" onmouseout="this.style.color='#0B122C'">
-                    Franchise <i class="fas fa-chevron-down" style="font-size: 9px; color: #718096;"></i>
-                </a>
-                
-                <a href="careers.html" style="text-decoration: none; color: #0B122C; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#E31E24'" onmouseout="this.style.color='#0B122C'">Careers</a>
-                
-                <a href="blog.html" style="text-decoration: none; color: #0B122C; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#E31E24'" onmouseout="this.style.color='#0B122C'">Blogs</a>
-                
-                <a href="contact.html" style="text-decoration: none; color: #0B122C; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#E31E24'" onmouseout="this.style.color='#0B122C'">Contact</a>
+            <nav id="nav-menu" class="nav-main">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#about-us" class="nav-link">About Us</a>
+                <a href="#services" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="#how-it-works" class="nav-link">Process</a>
+                <a href="#faq" class="nav-link">FAQs</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://pages.razorpay.com/pl_MLG0ca5YcAseS1/view" class="nav-pay-btn">Online Payment <i class="fas fa-arrow-up-right-from-square"></i></a>
             </nav>
 
-            <div class="header-btn" style="flex: 1 1 auto; text-align: right; min-width: 150px;">
-                <a href="https://pages.razorpay.com/pl_MLG0ca5YcAseS1/view" style="background-color: #0B122C; color: #ffffff; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 11px; display: inline-flex; align-items: center; transition: background-color 0.3s; box-shadow: 0 4px 10px rgba(11, 18, 44, 0.2);" onmouseover="this.style.backgroundColor='#E31E24'" onmouseout="this.style.backgroundColor='#0B122C'">
-                    Online Payment <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 8px; color: #E31E24;"></i>
+            <div class="header-btn">
+                <a href="https://pages.razorpay.com/pl_MLG0ca5YcAseS1/view" class="btn-pay">
+                    Online Payment <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
             </div>
-
         </div>
     </header>
+
+    <!-- 3. Hero Section -->
     <section class="hero">
         <div class="hero-text">
             <h1>EXPERT <span class="text-red">CARE.</span><br>SEAMLESS <span class="text-red">MOVES.</span></h1>
             <p>Trust Mahima Packers & Movers For Secure And Timely Door-To-Door Delivery. We Handle The Heavy Lifting So You Can Focus On Your Next Chapter.</p>
+            
             <div class="hero-buttons">
-               <div class="contact-dropdown">
-    <button class="btn-red">Contact Us ▾</button>
-    <div class="dropdown-content">
-        <a href="tel:+917253007253">📞 Call Us</a>
-        <a href="https://wa.me/917253007253" target="_blank">💬 WhatsApp</a>
-    </div>
-</div>
-               <div class="top-social-links">
-    <span class="social-text">Connect With Us:</span>
-    
-    <a href="https://www.facebook.com/yourclientpage" target="_blank" class="social-icon fb" title="Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    
-    <a href="https://www.instagram.com/yourclientpage" target="_blank" class="social-icon insta" title="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-    
-    <a href="https://twitter.com/yourclientpage" target="_blank" class="social-icon x-twitter" title="Twitter">
-        <i class="fab fa-twitter"></i>
-    </a>
-</div>
+                <div class="contact-dropdown">
+                    <button class="btn-red btn-dropdown-trigger">Contact Us <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="tel:+917253007253">📞 Call Us</a>
+                        <a href="https://wa.me/917253007253" target="_blank">💬 WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="top-social-links">
+                    <span class="social-text">Connect With Us:</span>
+                    <a href="https://www.facebook.com/" target="_blank" class="social-icon fb" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-icon insta" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="social-icon x-twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
         </div>
+        
         <div class="hero-image">
             <div class="image-placeholder">
                 <div class="badge">100%<br><span>SAFE & SECURE</span></div>
@@ -90,140 +109,153 @@
         </div>
     </section>
 
-    <section id="payment" class="enquiry-section">
+    <!-- 4. Quick Enquiry Section -->
+    <section id="enquiry" class="enquiry-section animate-on-scroll">
         <div class="enquiry-container">
             <div class="enquiry-header">
                 MAKE A QUICK ENQUIRY NOW:
             </div>
             <form class="enquiry-form">
                 <div class="input-group">
-                    <input type="text" placeholder="Enter Your Name">
-                    <input type="text" placeholder="Enter Mobile Number">
-                    <input type="email" placeholder="Enter Your Email">
+                    <input type="text" placeholder="Enter Your Name" required>
+                    <input type="text" placeholder="Enter Mobile Number" required>
+                    <input type="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="input-group">
-                    <input type="text" placeholder="Enter Pickup Location">
-                    <input type="text" placeholder="Enter Drop Location">
+                    <input type="text" placeholder="Enter Pickup Location" required>
+                    <input type="text" placeholder="Enter Drop Location" required>
                 </div>
                 <div class="checkbox-group">
-                    <input type="checkbox" id="terms" checked>
+                    <input type="checkbox" id="terms" checked required>
                     <label for="terms">Agree To Terms & Privacy Policy</label>
                 </div>
-                <button type="button" class="btn-submit">Submit Enquiry &#8599;</button>
+                <button type="submit" class="btn-submit">Submit Enquiry <i class="fas fa-arrow-up-right"></i></button>
             </form>
         </div>
     </section>
 
-<section class="services-section" style="background-color: #0B122C; padding: 60px 4% 40px 4%; text-align: center; font-family: 'Poppins', sans-serif;">
-    <div style="margin-bottom: 40px;">
-        <h2 style="color: #ffffff; font-size: 28px; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">
-            OUR <span style="color: #E31E24;">SERVICES</span>
-        </h2>
-        <p style="color: #A0AEC0; font-size: 13px; max-width: 600px; margin: 0 auto; line-height: 1.5; font-weight: 400;">
-            We Don't Just Move Boxes; We Move Lives. Here Is The Impact We've Made Through Our Commitment To Quality.
-        </p>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto;">
-        
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service1.png" alt="Home Shifting" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">HOME SHIFTING SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
-            </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
-            </a>
+    <!-- 5. Services Section -->
+    <section id="services" class="services-section animate-on-scroll">
+        <div class="section-header">
+            <h2>OUR <span class="text-red">SERVICES</span></h2>
+            <p class="sub-text">We Don't Just Move Boxes; We Move Lives. Here Is The Impact We've Made Through Our Commitment To Quality.</p>
         </div>
 
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service2.png" alt="Office Shifting" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">OFFICE SHIFTING SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+        <div class="services-grid animate-on-scroll">
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service1.png" alt="Home Shifting">
+                </div>
+                <div class="card-content">
+                    <h3>HOME SHIFTING SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
             </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
-            </a>
+
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service2.png" alt="Office Shifting">
+                </div>
+                <div class="card-content">
+                    <h3>OFFICE SHIFTING SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service3.png" alt="Interstate Shifting">
+                </div>
+                <div class="card-content">
+                    <h3>INTERSTATE SHIFTING SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service4.png" alt="Local Shifting">
+                </div>
+                <div class="card-content">
+                    <h3>LOCAL SHIFTING SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service5.png" alt="Car Transport">
+                </div>
+                <div class="card-content">
+                    <h3>CAR TRANSPORT SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service6.png" alt="Bike Transport">
+                </div>
+                <div class="card-content">
+                    <h3>BIKE TRANSPORT SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service7.png" alt="International Shifting">
+                </div>
+                <div class="card-content">
+                    <h3>INTERNATIONAL SHIFTING SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="images/service8.png" alt="Corporate Shifting">
+                </div>
+                <div class="card-content">
+                    <h3>CORPORATE SHIFTING SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
+                    <a href="#enquiry" class="btn-card-more">
+                        Know More <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service3.png" alt="Interstate Shifting" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">INTERSTATE SHIFTING SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
-            </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
+        <div class="services-footer">
+            <a href="#enquiry" class="view-all-services-btn">
+                View All Services <i class="fas fa-arrow-right"></i>
             </a>
         </div>
+    </section>
 
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service4.png" alt="Local Shifting" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">LOCAL SHIFTING SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
-            </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
-            </a>
-        </div>
-
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service5.png" alt="Car Transport" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">CAR TRANSPORT SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
-            </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
-            </a>
-        </div>
-
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service6.png" alt="Bike Transport" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">BIKE TRANSPORT SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
-            </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
-            </a>
-        </div>
-
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service7.png" alt="International Shifting" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">INTERNATIONAL SHIFTING SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
-            </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
-            </a>
-        </div>
-
-        <div style="background: #ffffff; border-radius: 12px; padding: 15px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <div>
-                <img src="images/service8.png" alt="Corporate Shifting" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-                <h3 style="color: #0B122C; font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 0 0 8px 0; line-height: 1.3;">CORPORATE SHIFTING SERVICE</h3>
-                <p style="color: #718096; font-size: 11.5px; line-height: 1.5; margin: 0 0 15px 0;">Backed By A Decade Of Experience, We Provide End-To-End Shifting Solutions...</p>
-            </div>
-            <a href="services.html" style="background-color: #0B122C; color: #ffffff; text-align: center; padding: 10px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; display: block; transition: 0.3s;">
-                Know More <i class="fas fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 5px; color: #E31E24;"></i>
-            </a>
-        </div>
-
-    </div>
-
-    <div style="margin-top: 40px;">
-        <a href="services.html" class="view-all-btn" style="background-color: #E31E24; color: #ffffff; padding: 12px 30px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; text-transform: uppercase; display: inline-flex; align-items: center; transition: 0.3s; letter-spacing: 0.5px;">
-            View All Services <i class="fas fa-arrow-right" style="margin-left: 10px; font-size: 11px;"></i>
-        </a>
-    </div>
-</section>
-    
-    <section class="stats-section">
+    <!-- 6. Journey in Numbers / Stats Section -->
+    <section class="stats-section animate-on-scroll">
         <div class="section-header text-center">
             <h2>OUR JOURNEY <span class="text-red">IN NUMBERS</span></h2>
             <p class="sub-text">We Don't Just Move Boxes; We Move Lives. Here Is The Impact We've Made Through Our Commitment To Quality.</p>
@@ -248,141 +280,168 @@
             </div>
         </div>
     </section>
-    <section class="move-process" id="how-it-works">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>HOW WE GET YOU <span class="text-red">MOVED</span></h2>
-            <p>4 Swift Steps to Your New Destination</p>
-        </div>
 
-        <div class="process-flex-container">
-            <div class="process-col left">
-                <div class="process-card">
-                    <i class="fas fa-box-open card-icon"></i>
-                    <h4>1. Packing</h4>
-                    <p>Secure packaging for all items using quality materials.</p>
+    <!-- 7. Move Process Section -->
+    <section class="move-process animate-on-scroll" id="how-it-works">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>HOW WE GET YOU <span class="text-red">MOVED</span></h2>
+                <p class="sub-text">4 Swift Steps to Your New Destination</p>
+            </div>
+
+            <div class="process-flex-container">
+                <div class="process-col left">
+                    <div class="process-card">
+                        <i class="fas fa-box-open card-icon"></i>
+                        <h4>1. Packing</h4>
+                        <p>Secure packaging for all items using quality materials.</p>
+                    </div>
+                    <div class="process-card">
+                        <i class="fas fa-truck-loading card-icon"></i>
+                        <h4>2. Loading</h4>
+                        <p>Careful loading with expert handlers.</p>
+                    </div>
                 </div>
-                <div class="process-card">
-                    <i class="fas fa-truck-loading card-icon"></i>
-                    <h4>2. Loading</h4>
-                    <p>Careful loading with expert handlers.</p>
-                </div>
-            </div>
 
-            <div class="process-center-img">
-    <img src="https://cdn-icons-png.flaticon.com/512/2830/2830305.png" alt="Delivery Boy" class="move-img">
-</div>
-
-            <div class="process-col right">
-                <div class="process-card">
-                    <i class="fas fa-route card-icon"></i>
-                    <h4>3. Transit</h4>
-                    <p>Fast and tracked transit on selected routes.</p>
+                <div class="process-center-img">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2830/2830305.png" alt="Delivery Boy" class="move-img">
                 </div>
-                <div class="process-card">
-                    <i class="fas fa-hand-holding-box card-icon"></i>
-                    <h4>4. Unloading</h4>
-                    <p>Safe delivery and placement at your new home.</p>
+
+                <div class="process-col right">
+                    <div class="process-card">
+                        <i class="fas fa-route card-icon"></i>
+                        <h4>3. Transit</h4>
+                        <p>Fast and tracked transit on selected routes.</p>
+                    </div>
+                    <div class="process-card">
+                        <i class="fas fa-hand-holding-box card-icon"></i>
+                        <h4>4. Unloading</h4>
+                        <p>Safe delivery and placement at your new home.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-   <section class="settlement-section">
-    <div class="settlement-header">
-        <h2>YOUR COMPLETE <span class="text-red">SETTLEMENT PARTNER</span></h2>
-        <p>Experience Seamless Support With Our Range Of Auxiliary Services—Covering Everything From Vehicle Care To Professional Home Repairs.</p>
-    </div>
-
-    <div class="settlement-grid">
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement1.png" alt="Hotel Booking">
-                <h3>HOTEL BOOKING</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
-            </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+    <!-- 8. Settlement Partner Section -->
+    <section class="settlement-section animate-on-scroll">
+        <div class="settlement-header">
+            <h2>YOUR COMPLETE <span class="text-red">SETTLEMENT PARTNER</span></h2>
+            <p>Experience Seamless Support With Our Range Of Auxiliary Services—Covering Everything From Vehicle Care To Professional Home Repairs.</p>
         </div>
 
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement2.png" alt="Room Rent">
-                <h3>ROOM RENT</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+        <div class="settlement-grid animate-on-scroll">
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement1.png" alt="Hotel Booking">
+                </div>
+                <div class="card-content">
+                    <h3>HOTEL BOOKING</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement2.png" alt="Room Rent">
+                </div>
+                <div class="card-content">
+                    <h3>ROOM RENT</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement3.png" alt="Car Rent">
+                </div>
+                <div class="card-content">
+                    <h3>CAR RENT</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement4.png" alt="Plumber Service">
+                </div>
+                <div class="card-content">
+                    <h3>PLUMBER SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement5.png" alt="AC Service">
+                </div>
+                <div class="card-content">
+                    <h3>AC SERVICE</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement6.png" alt="Car Painter">
+                </div>
+                <div class="card-content">
+                    <h3>CAR PAINTER</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement7.png" alt="Pest Control">
+                </div>
+                <div class="card-content">
+                    <h3>PEST CONTROL</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="settlement-card">
+                <div class="card-image-wrapper">
+                    <img src="images/settlement8.png" alt="Home Cleaning">
+                </div>
+                <div class="card-content">
+                    <h3>HOME CLEANING</h3>
+                    <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
+                    <a href="#enquiry" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
         </div>
 
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement3.png" alt="Car Rent">
-                <h3>CAR RENT</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
-            </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
+        <div class="settlement-footer">
+            <a href="#enquiry" class="settlement-view-all">View All <i class="fas fa-arrow-right"></i></a>
         </div>
+    </section>
 
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement4.png" alt="Plumber Service">
-                <h3>PLUMBER SERVICE</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
-            </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement5.png" alt="AC Service">
-                <h3>AC SERVICE</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
-            </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement6.png" alt="Car Painter">
-                <h3>CAR PAINTER</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
-            </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement7.png" alt="Room Rent">
-                <h3>ROOM RENT</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
-            </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-
-        <div class="settlement-card">
-            <div>
-                <img src="images/settlement8.png" alt="Hotel Booking">
-                <h3>HOTEL BOOKING</h3>
-                <p>Backed By A Decade Of Experience, We Provide End-To-End Solutions...</p>
-            </div>
-            <a href="services.html" class="settlement-link">Know More <i class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </div>
-
-    <div class="settlement-footer">
-        <a href="services.html" class="settlement-view-all">View All <i class="fas fa-arrow-right"></i></a>
-    </div>
-</section>
-
-    <section class="responsibility-section">
+    <!-- 9. Responsibility Section -->
+    <section id="about-us" class="responsibility-section animate-on-scroll">
         <div class="resp-content">
             <h2>YOUR JOURNEY, <span class="text-red">OUR RESPONSIBILITY</span></h2>
             <p>At Mahima Packers & Movers, We Specialize In Making Your Move Smooth, Secure, And Stress-Free. With Years Of Experience In The Packing And Moving Industry, We've Built A Reputation For Reliability, Efficiency, And Customer Satisfaction.</p>
             <p>Whether You're Relocating Your Home, Office, Or Vehicle, Our Dedicated Team Ensures Every Item Is Handled With Care. From High-Quality Packing Materials To Timely Delivery, We Take Pride In Offering End-To-End Moving Solutions Tailored To Your Needs.</p>
-            <p style="font-weight: 700; color: #151a30; margin-bottom: 25px;">Mahima Packers & Movers — Moving Made Easy.</p>
-            <a href="#" class="btn-dark">More About Us</a>
+            <p class="resp-bold">Mahima Packers & Movers — Moving Made Easy.</p>
+            <a href="#enquiry" class="btn-dark">More About Us</a>
+        </div>
+        <div class="resp-video">
+            <div class="video-placeholder">
+                <i class="fas fa-play play-icon"></i>
+            </div>
         </div>
     </section>
+
+    <!-- 10. Brands Section -->
     <section class="brands-section">
         <div class="section-header text-center">
             <h2>WHO WE <span class="text-red">WORK WITH</span></h2>
@@ -390,28 +449,31 @@
         </div>
         
         <div class="brands-flex">
-            <div class="brand-logo" style="color: #e31e24;">TCS</div>
-            <div class="brand-logo" style="color: #f59e0b;">Pidilite</div>
-            <div class="brand-logo" style="color: #0ea5e9;">SBI</div>
-            <div class="brand-logo" style="color: #1e3a8a;">HUL</div>
-            <div class="brand-logo">Accenture</div>
-        </div>
-    </section>
-    <section class="presence-section text-center">
-        <a href="#" class="btn-outline" style="margin-bottom: 30px; display: inline-block;">View All &#8599;</a>
-        <h2>OUR PRESENCE <span class="text-red">ACROSS INDIA</span></h2>
-        <p class="sub-text">A Comprehensive Logistics Network Designed To Bridge The Distance Between Your Old Home And Your New Beginning.</p>
-        
-        <div class="map-container" style="margin-top: 50px;">
-            <img src="images/india-map.png" alt="India Presence Map" class="exact-map">
-            <a href="#" class="map-btn">VIEW INTERSTATE ROUTES &#8599;</a>
+            <div class="brand-logo tcs">TCS</div>
+            <div class="brand-logo pidilite">Pidilite</div>
+            <div class="brand-logo sbi">SBI</div>
+            <div class="brand-logo hul">HUL</div>
+            <div class="brand-logo accenture">Accenture</div>
         </div>
     </section>
 
-    <section class="pan-india-section">
+    <!-- 11. Presence Section -->
+    <section class="presence-section text-center animate-on-scroll">
+        <a href="#enquiry" class="btn-outline">View All &#8599;</a>
+        <h2>OUR PRESENCE <span class="text-red">ACROSS INDIA</span></h2>
+        <p class="sub-text">A Comprehensive Logistics Network Designed To Bridge The Distance Between Your Old Home And Your New Beginning.</p>
+        
+        <div class="map-container">
+            <img src="images/india-map.svg" alt="India Presence Map" class="exact-map">
+            <a href="#enquiry" class="map-btn">VIEW INTERSTATE ROUTES &#8599;</a>
+        </div>
+    </section>
+
+    <!-- 12. Pan-India Grid Section -->
+    <section class="pan-india-section animate-on-scroll">
         <div class="section-header text-center">
-            <h2 style="color: #ffffff;">PAN-<span class="text-red">INDIA PRESENCE</span></h2>
-            <p class="sub-text" style="color: #9ca3af;">Experience Professional Packing And Moving Solutions In Your City. Our Verified Local Teams Ensure A Safe Transition, Wherever You Are.</p>
+            <h2>PAN-<span class="text-red">INDIA PRESENCE</span></h2>
+            <p class="sub-text">Experience Professional Packing And Moving Solutions In Your City. Our Verified Local Teams Ensure A Safe Transition, Wherever You Are.</p>
         </div>
         
         <div class="cities-grid">
@@ -445,56 +507,59 @@
             </div>
         </div>
         
-        <div class="text-center" style="margin-top: 50px;">
-            <a href="#" class="btn-outline-white">More Locations &#8599;</a>
+        <div class="text-center">
+            <a href="#enquiry" class="btn-outline-white">More Locations &#8599;</a>
         </div>
     </section>
-    <section class="insights-section">
+
+    <!-- 13. Insights / Blog Section -->
+    <section class="insights-section animate-on-scroll">
         <div class="section-header text-center">
             <h2>MOVING <span class="text-red">INSIGHTS & TIPS</span></h2>
             <p class="sub-text">Expert Advice And Practical Guides To Help You Navigate Your Relocation Journey With Ease And Confidence.</p>
         </div>
         
-        <div class="insights-grid">
+        <div class="insights-grid animate-on-scroll">
             <div class="insight-card">
-                <div class="insight-img"></div>
+                <div class="insight-img home-reloc"></div>
                 <div class="insight-content">
                     <h4>HOME RELOCATION</h4>
-                    <p>Preparation Is The Key To A Stress-Free Move. From Declutt...</p>
-                    <a href="#" class="read-more-btn">Read More &#8599;</a>
+                    <p>Preparation Is The Key To A Stress-Free Move. From Decluttering...</p>
+                    <a href="#enquiry" class="read-more-btn">Read More &#8599;</a>
                 </div>
             </div>
             <div class="insight-card">
-                <div class="insight-img"></div>
+                <div class="insight-img vehicle-safety"></div>
                 <div class="insight-content">
                     <h4>VEHICLE SAFETY</h4>
-                    <p>Preparation Is The Key To A Stress-Free Move. From Declutt...</p>
-                    <a href="#" class="read-more-btn">Read More &#8599;</a>
+                    <p>Preparation Is The Key To A Stress-Free Move. From Decluttering...</p>
+                    <a href="#enquiry" class="read-more-btn">Read More &#8599;</a>
                 </div>
             </div>
             <div class="insight-card">
-                <div class="insight-img"></div>
+                <div class="insight-img corp-shifting"></div>
                 <div class="insight-content">
                     <h4>CORPORATE SHIFTING</h4>
-                    <p>Preparation Is The Key To A Stress-Free Move. From Declutt...</p>
-                    <a href="#" class="read-more-btn">Read More &#8599;</a>
+                    <p>Preparation Is The Key To A Stress-Free Move. From Decluttering...</p>
+                    <a href="#enquiry" class="read-more-btn">Read More &#8599;</a>
                 </div>
             </div>
             <div class="insight-card">
-                <div class="insight-img"></div>
+                <div class="insight-img lifestyle-maint"></div>
                 <div class="insight-content">
                     <h4>LIFESTYLE & MAINTENANCE</h4>
-                    <p>Preparation Is The Key To A Stress-Free Move. From Declutt...</p>
-                    <a href="#" class="read-more-btn">Read More &#8599;</a>
+                    <p>Preparation Is The Key To A Stress-Free Move. From Decluttering...</p>
+                    <a href="#enquiry" class="read-more-btn">Read More &#8599;</a>
                 </div>
             </div>
         </div>
-        <div class="text-center" style="margin-top: 40px;">
-            <a href="#" class="btn-dark">View More &#8599;</a>
+        <div class="text-center">
+            <a href="#enquiry" class="btn-dark">View More &#8599;</a>
         </div>
     </section>
 
-    <section class="faq-section">
+    <!-- 14. FAQs Section -->
+    <section id="faq" class="faq-section animate-on-scroll">
         <div class="section-header text-center">
             <h2>FREQUENTLY <span class="text-red">ASKED QUESTIONS</span></h2>
             <p class="sub-text">Common Queries About Our Services</p>
@@ -503,135 +568,106 @@
         <div class="faq-grid">
             <div class="faq-col">
                 <details class="faq-item">
-                    <summary>How Do I Get An Estimate For My Move?</summary>
+                    <summary>How Do I Get An Estimate For My Move? <i class="fas fa-plus icon-plus"></i></summary>
                     <div class="faq-answer">You can get a free estimate by calling our helpline or filling out the quick enquiry form at the top of the page.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>How Far In Advance Should I Book My Relocation?</summary>
+                    <summary>How Far In Advance Should I Book My Relocation? <i class="fas fa-plus icon-plus"></i></summary>
                     <div class="faq-answer">We recommend booking at least 1-2 weeks in advance to ensure smooth scheduling and availability.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>How Do You Ensure The Safety Of Fragile Items?</summary>
+                    <summary>How Do You Ensure The Safety Of Fragile Items? <i class="fas fa-plus icon-plus"></i></summary>
                     <div class="faq-answer">We use multi-layer premium packing materials like bubble wrap, foam peanuts, and specialized cartons for delicate items.</div>
                 </details>
             </div>
             
             <div class="faq-col">
                 <details class="faq-item">
-                    <summary>Do You Provide Insurance For My Belongings?</summary>
+                    <summary>Do You Provide Insurance For My Belongings? <i class="fas fa-plus icon-plus"></i></summary>
                     <div class="faq-answer">Yes, we offer comprehensive transit insurance to protect your goods against any unforeseen circumstances during the move.</div>
                 </details>
                 <details class="faq-item" open>
-                    <summary>What Is Included In Your "Lifestyle & Maintenance" Services?</summary>
+                    <summary>What Is Included In Your "Lifestyle & Maintenance" Services? <i class="fas fa-plus icon-plus"></i></summary>
                     <div class="faq-answer">We Go Beyond Shifting To Help You Settle In. This Includes Pre-Verified Hotel Bookings, Car Rentals, And Professional Maintenance Like Plumbing, Electrical Work, And Car Painting. You Can Book These As Standalone Services Or As Part Of Your Moving Package.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Can I Track My Shipment?</summary>
+                    <summary>Can I Track My Shipment? <i class="fas fa-plus icon-plus"></i></summary>
                     <div class="faq-answer">Absolutely! We provide a dedicated tracking ID so you can monitor the status of your moving truck in real-time.</div>
                 </details>
             </div>
         </div>
     </section>
-<section class="impact-section text-center">
+
+    <!-- 15. Impact Grid Section -->
+    <section class="impact-section text-center animate-on-scroll">
         <div class="section-header">
             <h2>OUR <span class="text-red">IMPACT</span></h2>
             <p class="sub-text">Over Three Decades Of Excellence, Delivering Safety And Trust To Every Doorstep.</p>
         </div>
         
         <div class="impact-grid">
-            <div class="impact-card">
-                SINCE<br><span class="text-red">1986</span>
-            </div>
-            <div class="impact-card">
-                <span class="text-red">IBA</span><br>APPROVED
-            </div>
-            <div class="impact-card">
-                ON TIME<br><span class="text-red">DELIVERY 99%</span>
-            </div>
-            <div class="impact-card">
-                AFFORDABLE<br>PRICE
-            </div>
-            <div class="impact-card">
-                TRUSTED<br>PARTNERS <span class="text-red">150+</span>
-            </div>
-            <div class="impact-card">
-                HIGHLY TRAINED<br>MANPOWER
-            </div>
-            
-            <div class="impact-card">
-                <span class="text-red">25+</span><br>BRANCHES
-            </div>
-            <div class="impact-card">
-                FULLY<br>INSURED
-            </div>
-            <div class="impact-card">
-                NO HIDDEN<br>CHARGES
-            </div>
-            <div class="impact-card">
-                COVERED CITY<br><span class="text-red">300+</span>
-            </div>
-            <div class="impact-card">
-                CUSTOMER'S<br>REFERRAL RATE<br><span class="text-red">98%</span>
-            </div>
-            <div class="impact-card">
-                <span class="text-red">170000+</span><br>HAPPY<br>CUSTOMER'S
-            </div>
+            <div class="impact-card">SINCE<br><span class="text-red">1986</span></div>
+            <div class="impact-card"><span class="text-red">IBA</span><br>APPROVED</div>
+            <div class="impact-card">ON TIME<br><span class="text-red">DELIVERY 99%</span></div>
+            <div class="impact-card">AFFORDABLE<br>PRICE</div>
+            <div class="impact-card">TRUSTED<br>PARTNERS <span class="text-red">150+</span></div>
+            <div class="impact-card">HIGHLY TRAINED<br>MANPOWER</div>
+            <div class="impact-card"><span class="text-red">25+</span><br>BRANCHES</div>
+            <div class="impact-card">FULLY<br>INSURED</div>
+            <div class="impact-card">NO HIDDEN<br>CHARGES</div>
+            <div class="impact-card">COVERED CITY<br><span class="text-red">300+</span></div>
+            <div class="impact-card">CUSTOMER'S<br>REFERRAL RATE<br><span class="text-red">98%</span></div>
+            <div class="impact-card"><span class="text-red">170000+</span><br>HAPPY<br>CUSTOMER'S</div>
         </div>
     </section>
-    <footer class="site-footer">
+
+    <!-- 16. Footer Section -->
+    <footer class="site-footer" id="contact">
         <div class="footer-banner">
             <div class="banner-text">
                 <h2>FOR ALL YOUR <span class="text-red">SHIFTING NEEDS</span> FEEL<br><span class="text-red">FREE</span> TO CONTACT US</h2>
                 <div class="banner-buttons">
                     <a href="tel:+917253007253" class="btn-red">Call Us Now</a>
-                    <a href="https://wa.me/917253007253" target="_blank" class="btn-red">Contact Us on WhatsApp</a>
+                    <a href="https://wa.me/917253007253" target="_blank" class="btn-red">Contact on WhatsApp</a>
                 </div>
             </div>
         </div>
         
         <div class="footer-main">
             <div class="footer-col brand-col">
-                <h2 style="color: #e31e24; font-weight: 900; font-size: 30px;">mahima</h2>
-                <p style="margin-top: 15px; font-size: 14px;">Call For A Free Estimate:<br><strong class="text-red" style="font-size: 20px;">7253-00-7253</strong></p>
-                <a href="#" class="btn-outline-white" style="display: inline-block; margin-top: 15px;">Call Now &#8599;</a>
+                <h2 class="footer-brand">mahima</h2>
+                <p>Call For A Free Estimate:<br><strong class="text-red footer-phone">7253-00-7253</strong></p>
+                <a href="tel:+917253007253" class="btn-outline-white">Call Now &#8599;</a>
             </div>
             
             <div class="footer-col links-col">
-                <a href="#">HOME</a>
-                <a href="#">ABOUT US</a>
-                <a href="#">CAREERS</a>
-                <a href="#">BLOGS</a>
-                <a href="#">CONTACT</a>
+                <a href="index.html">HOME</a>
+                <a href="#about-us">ABOUT US</a>
+                <a href="#services">SERVICES</a>
+                <a href="#faq">FAQs</a>
+                <a href="#contact">CONTACT</a>
             </div>
             
             <div class="footer-col links-col">
-                <a href="#">PACKERS AND MOVERS</a>
-                <a href="#">CAR TRANSPORTATION</a>
-                <a href="#">WHY JOIN</a>
+                <a href="#services">PACKERS AND MOVERS</a>
+                <a href="#services">CAR TRANSPORTATION</a>
+                <a href="#how-it-works">WHY JOIN</a>
             </div>
 
             <div class="footer-col contact-col">
-                <p>📞 7253-00-7253</p>
-                <p>✉️ info@mahimapackers.com</p>
-                <p>📍 Corporate Office: Muzaffarpur, Bihar</p>
+                <p><i class="fas fa-phone-alt"></i> 7253-00-7253</p>
+                <p><i class="fas fa-envelope"></i> info@mahimapackers.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Corporate Office: Muzaffarpur, Bihar</p>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>© 2026 Mahima Packers & Movers. All Rights Reserved.</p>
+            <p>&copy; 2026 Mahima Packers & Movers. All Rights Reserved.</p>
             <p>Privacy Policy | Terms & Conditions</p>
         </div>
     </footer>
-<script>
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            
-            // 1.5 seconds ke baad loader hide ho jayega
-            setTimeout(function() {
-                preloader.classList.add('hide-loader');
-            }, 1500); 
-        });
-    </script>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>

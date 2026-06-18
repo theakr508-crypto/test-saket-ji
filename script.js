@@ -106,4 +106,26 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // ==========================================
+    // 🎬 ON-SCROLL ANIMATION OBSERVER 🎬
+    // ==========================================
+    const animElements = document.querySelectorAll('.animate-on-scroll');
+
+    if (animElements.length > 0) {
+        const animObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+                    // Once animated, we don't need to observe it anymore
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: "0px 0px -30px 0px"
+        });
+
+        animElements.forEach(el => animObserver.observe(el));
+    }
 });
